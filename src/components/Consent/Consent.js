@@ -65,13 +65,11 @@ class Consent extends Component {
   // console.log(this.state.checkboxes)
 
   this.handleSubmit        = this.handleSubmit.bind(this);  
-  
   this.createCheckBox      = this.createCheckBox.bind(this);
   this.createCheckBoxes    = this.createCheckBoxes.bind(this)
-
   this.redirectToInfo      = this.redirectToInfo.bind(this); 
-  this.selectAllCheckboxes = this.selectAllCheckboxes.bind(this)
-  this.selectAll           = this.selectAll.bind(this)
+  // this.selectAllCheckboxes = this.selectAllCheckboxes.bind(this)
+  // this.selectAll           = this.selectAll.bind(this)
   
   }
 
@@ -107,25 +105,24 @@ redirectToInfo() {
  }
 
 
-selectAllCheckboxes(isSelected){
-    // console.log(this.state.checkboxes)
+// selectAllCheckboxes(isSelected){
+//     // console.log(this.state.checkboxes)
 
-    Object.keys(this.state.checkboxes).forEach(checkbox => {
-      // BONUS: Can you explain why we pass updater function to setState instead of an object?
-      this.setState(prevState => ({
-        checkboxes: {
-          ...prevState.checkboxes,
-          [checkbox]: isSelected
-        }
-      }));
-    });
+//     Object.keys(this.state.checkboxes).forEach(checkbox => {
+//       // BONUS: Can you explain why we pass updater function to setState instead of an object?
+//       this.setState(prevState => ({
+//         checkboxes: {
+//           ...prevState.checkboxes,
+//           [checkbox]: isSelected
+//         }
+//       }));
+//     });
 
-  };
-
-selectAll(){
-  // console.log(this.state.checkboxes)
-  this.selectAllCheckboxes(true);
-} 
+//   };
+// selectAll(){
+//   // console.log(this.state.checkboxes)
+//   this.selectAllCheckboxes(true);
+// } 
 
 
 handleSubmit(event) {
@@ -215,12 +212,7 @@ createCheckBoxes(){
           </button>
         </div>
         <p></p>
-        <div>
-          <button type="button" className="btn btn-save btn-primary pad-20" onClick={this.selectAll}>
-            SELECT ALL - TEMPO
-          </button>
-        </div>
-      </div>
+          </div>
       </center>
 
     </CSSTransitionGroup>
