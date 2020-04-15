@@ -96,7 +96,7 @@ NoShuffleArray(array) {
     
     this.setUserAnswer(event.currentTarget.value,answerContent,questionId); // event.currentTarget.value); // to be changed to see what is recorded 
 
-    if (this.state.questionCount < this.state.quizQuestionsBlock.length) {  // this.state.quizQuestionsBlock.length CHANGE BACK this.state.quizQuestionsBlock.lengthto change to the number of questions in this part of the Survey
+    if (this.state.questionCount < 2) {  // this.state.quizQuestionsBlock.length this.state.quizQuestionsBlock.length CHANGE BACK this.state.quizQuestionsBlock.lengthto change to the number of questions in this part of the Survey
       setTimeout(() => this.setNextQuestion(), 300);
     } else {
       setTimeout(() => this.redirectToSurvey(), 300); 

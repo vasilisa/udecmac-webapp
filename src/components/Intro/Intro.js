@@ -17,21 +17,20 @@ Contains the INFORMATION for COVID-19 participants FROM THE ONLINE ETHICS
 
 // Specify a SURVEY LIST HERE FOR SIMPLICITY 
 // Has to match the import names in the Survey.js 
-const survey_list = ['pad','bis','hads','pss','pswq','ius','ybocs','demo','covid','iq','feedback'] 
+const survey_list = ['pad'] // ,'bis','hads','pss','pswq','ius','ybocs','demo','covid','iq','feedback'] 
 const n           =  survey_list.length-1;   
 
 class Intro extends React.Component {
   constructor(props) {
     super(props);
 
-
-    let url    = this.props.location.search;
-    console.log(url) 
+    let url    = this.props.location.search; // URL from Prolific
+    // console.log(url) 
     let params = queryString.parse(url);
 
     console.log(params) 
-    const prolific_id = (params['PROLIFIC_PID']=== undefined ? 'undefined' : params['PROLIFIC_PID']) 
-    const study_id    = (params['STUDY_ID']=== undefined ? 'undefined' : params['STUDY_ID']) 
+    const prolific_id = (params['PROLIFIC_PID']=== undefined ? 'test' : params['PROLIFIC_PID']) 
+    const study_id    = (params['STUDY_ID']=== undefined ? 'study_id' : params['STUDY_ID']) 
 
     var currentDate = new Date(); // maybe change to local 
     var date        = currentDate.getDate();
@@ -48,7 +47,8 @@ class Intro extends React.Component {
       block_number : 0, // has to be in the parent for Survey component for proper functioning 
       TotalBlock: n, // has to be in the parent for Survey component for proper functioning 
       date: dateString,
-      survey_list: survey_list  
+      survey_list: survey_list, 
+      task: true  
   }
 
   console.log(this.state.TotalBlock)

@@ -161,11 +161,22 @@ class Survey extends React.Component {
 }
 
  redirectToEnd(){
+    // redirect either to the TASK or to the validation page depeneding on the task status 
+    if (this.props.location.state.participant_info.task = true) {
+      alert("You will now be redirected to the perceptual decision game. Please, confirm leaving the page. Thank you!")
+      
+      // window.location = 'http://localhost:5000/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id 
+      window.location = 'https://udecmac.osc-fr1.scalingo.io/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id 
 
-    alert("You will be redirected to the validation page. Please, confirm leaving the page. Thank you!")
-    // window.location.replace('https://app.prolific.co/submissions/complete?cc=1A496EDB')
-    window.location = 'https://app.prolific.co/submissions/complete?cc=XXXXXXXX' // add STUDY_ID 
+    }
+    else {
+
+      alert("You will be redirected to the validation page. Please, confirm leaving the page. Thank you!")
+      // window.location.replace('https://app.prolific.co/submissions/complete?cc=1A496EDB')
+      window.location = 'https://app.prolific.co/submissions/complete?cc=' + this.props.location.state.participant_info.study_id // CHECK if validation code == stidu id 
+  }
 }
+  
 
 render()
   { 
