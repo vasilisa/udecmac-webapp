@@ -5,29 +5,39 @@ import {withRouter} from 'react-router-dom';
 // import other questionnaires the same way 
 import * as demo  from '../../questionnaires/DEMO'; 
 import * as ybocs from '../../questionnaires/YBOCS'; 
-import * as covid from '../../questionnaires/COVID19';
-import * as pad from '../../questionnaires/PAD-WSUR';
+import * as pad from '../../questionnaires/PADWSUR';
 import * as hads from '../../questionnaires/HADS';
 import * as pss from '../../questionnaires/PSS';
 import * as pswq from '../../questionnaires/PSWQ';
 import * as ius from '../../questionnaires/IUS';
 import * as bis from '../../questionnaires/BIS11';
-import * as feedback from '../../questionnaires/FEEDBACK';
+// import * as feedback from '../../questionnaires/FEEDBACK';
 import * as iq from '../../questionnaires/IQ';
+// Questions specific for part 1 COVID19: 
+import * as covidknw from '../../questionnaires/COVID19_knw_part1.js';
+import * as covidbsl from '../../questionnaires/COVID19_bsl_beh_part2.js';
+import * as covidprotbeh from '../../questionnaires/COVID19_protbehav_part3.js';
+import * as covidinfos from '../../questionnaires/COVID19_infos_part4.js';
+import * as covidrisk from '../../questionnaires/COVID19_riskperc_part5.js';
+import * as covidpersimp from '../../questionnaires/COVID19_persimp_part6.js';
 
 
 var quizData = {
-  pad:pad,
+  covidknw: covidknw,
+  covidbsl: covidbsl,
+  covidprotbeh: covidprotbeh,
+  covidinfos: covidinfos,
+  covidrisk: covidrisk,
+  covidpersimp: covidpersimp,
+  pad: pad,
   hads: hads, 
   pss: pss,
   pswq: pswq,
   bis: bis,
   ius: ius,  
-  demo:demo,
-  ybocs:ybocs,
-  covid:covid, 
-  feedback: feedback,
-  iq: iq 
+  demo: demo,
+  ybocs: ybocs, 
+  iq:iq 
 }
 
 
@@ -81,7 +91,7 @@ class Survey extends React.Component {
           if (this.state.newblock_frame){ // TRUE
           this.setState({newblock_frame : false})
 
-          console.log(this.state.newblock_frame)
+          // console.log(this.state.newblock_frame)
           this.props.history.push({
            pathname: `/QuizBlock`,
            state: {participant_info: this.state.participant_info,
@@ -94,7 +104,7 @@ class Survey extends React.Component {
             if (this._isMounted)
             {
 
-              console.log('Block number',this.props.location.state.participant_info.block_number)
+              // console.log('Block number',this.props.location.state.participant_info.block_number)
               
               if (this.props.location.state.participant_info.block_number===this.props.location.state.participant_info.TotalBlock){ // just finished the LAST BLOCK 
               
@@ -105,7 +115,7 @@ class Survey extends React.Component {
               else if (this.props.location.state.participant_info.block_number<this.props.location.state.participant_info.TotalBlock){ // just finished the LAST BLOCK 
               
               const newblocknumber = this.props.location.state.participant_info.block_number + 1
-              console.log(newblocknumber)
+              // console.log(newblocknumber)
               this.getSurveyBlock(newblocknumber,this.props.location.state.participant_info.survey_list)
               this.setState({newblock_frame: true, participant_info : {...this.state.participant_info, block_number:newblocknumber},}) 
               }
@@ -151,10 +161,10 @@ class Survey extends React.Component {
  // Get info about the specific Survey Block: 
  getSurveyBlock(block_number_,survey_list_) {
 
-    console.log('Block Number Get Survey Block:',block_number_+1)
+    // console.log('Block Number Get Survey Block:',block_number_+1)
 
     const surveytag_block = survey_list_[block_number_]
-    console.log('SurveyTag Block:',surveytag_block)
+    // console.log('SurveyTag Block:',surveytag_block)
  
     this.setState({ loading: true , questions: quizData[survey_list_[block_number_]].default, block_info : {...this.state.block_info, surveytag:surveytag_block}});
 
@@ -163,17 +173,16 @@ class Survey extends React.Component {
  redirectToEnd(){
     // redirect either to the TASK or to the validation page depeneding on the task status 
     if (this.props.location.state.participant_info.task = true) {
-      alert("You will now be redirected to the perceptual decision game. Please, confirm leaving the page. Thank you!")
-      
-      // window.location = 'http://localhost:5000/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id 
-      window.location = 'https://udecmac.osc-fr1.scalingo.io/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id 
+      alert("You will now be redirected to the experimental game. Please, confirm leaving the page. Thank you!")
+      // create a flexible link including prolific id, study id longit and participant ids and redirect to the external 
+      window.location = 'http://localhost:5000/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id 
 
     }
     else {
 
-      alert("You will be redirected to the validation page. Please, confirm leaving the page. Thank you!")
+      alert("You will now be redirected to the validation page. Please, confirm leaving the page. Thank you!")
       // window.location.replace('https://app.prolific.co/submissions/complete?cc=1A496EDB')
-      window.location = 'https://app.prolific.co/submissions/complete?cc=' + this.props.location.state.participant_info.study_id // CHECK if validation code == stidu id 
+      // window.location = 'https://app.prolific.co/submissions/complete?cc=' + this.props.location.state.participant_info.study_id // CHECK if validation code == stidu id 
   }
 }
   
@@ -216,15 +225,27 @@ render()
 
     else if (this.props.location.state.participant_info.block_number === this.props.location.state.participant_info.TotalBlock && this.state.finished===true) 
     {
-      text = <div className='SurveyIntroText'> <p><span className="bold">You finished the survey!</span> </p>
-      <p>Thank you for your participation!</p> 
-      <Button variant="secondary" color="danger" size="sm" className="buttonInstructionFinal" type="submit" onClick={() => this.redirectToEnd()}>Click here </Button></div>
-        return (
+      if (this.props.location.state.participant_info.task===true) {
+        text = <div className='SurveyIntroText'> <p><span className="bold">You completed all the questionnaires!</span></p>
+              <p>You will now be redirected to the experimental game.</p>
+              <p>Please, confirm leaving the page when prompted by the browser.Thank you!</p></div>      
+      }
+      
+      else {
+        text = <div className='SurveyIntroText'> <p><span className="bold">You completed all the questionnaires!</span></p>
+            <p>You will now be redirected to the validation page.</p>
+            <p>Please, confirm leaving the page when prompted by the browser. Thank you!</p></div>
+      }
+
+      return (
           <div>
           <center> 
           <div className="restarttraining">
               {text}  <div className="translate"/>
-            </div>
+          </div>
+          <div>
+            <Button variant="secondary" color="danger" size="sm" className="buttonInstructionFinal" type="submit" onClick={() => this.redirectToEnd()}>Continue</Button>
+          </div>
           </center>
           </div>);        
     }
