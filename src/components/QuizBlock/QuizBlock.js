@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { API_URL } from '../../config';
-
 import Quiz from '../Quiz/Quiz';
 import Report from '../Report/Report';
 import ReportNA from '../ReportNA/ReportNA';
@@ -9,14 +8,14 @@ import ButtonQuiz from '../ButtonQuiz/ButtonQuiz';
 import CheckboxQuiz from '../CheckboxQuiz/CheckboxQuiz'; 
 
 
-class QuizBlock extends Component {
+class QuizBlock extends React.Component {
   constructor(props) {
     super(props);
 
     // Get the right questions JSON part
     var quizQuestionsBlock = this.props.location.state.questions.filter(d => d.surveytag === this.props.location.state.block_info.surveytag);
     
-    console.log(quizQuestionsBlock)
+    // console.log(quizQuestionsBlock)
     
     this.state = {
       counter: 0,
@@ -43,7 +42,7 @@ class QuizBlock extends Component {
    this.handleAnswerSelected  = this.handleAnswerSelected.bind(this);
    this.redirectToSurvey      = this.redirectToSurvey.bind(this);
     
-    console.log(this.state)
+    // console.log(this.state)
   }
 
   componentDidMount() {
@@ -94,9 +93,9 @@ NoShuffleArray(array) {
   // onAnswerSelected points to this function in AnswerOption.js 
   handleAnswerSelected(answerContent,questionId,event) {
     
-    this.setUserAnswer(event.currentTarget.value,answerContent,questionId); // event.currentTarget.value); // to be changed to see what is recorded 
+    this.setUserAnswer(event.currentTarget.value,answerContent,questionId); 
 
-    if (this.state.questionCount < 2) {  // this.state.quizQuestionsBlock.length this.state.quizQuestionsBlock.length CHANGE BACK this.state.quizQuestionsBlock.lengthto change to the number of questions in this part of the Survey
+    if (this.state.questionCount < this.state.quizQuestionsBlock.length) {   
       setTimeout(() => this.setNextQuestion(), 300);
     } else {
       setTimeout(() => this.redirectToSurvey(), 300); 
@@ -147,7 +146,7 @@ NoShuffleArray(array) {
 
   {
     let block_id = this.state.participant_info.block_number+1
-    console.log('Block_number QuizBlock:', this.state.participant_info.block_number)
+    // console.log('Block_number QuizBlock:', this.state.participant_info.block_number)
 
     if (this.state.participant_info.block_number < this.state.participant_info.TotalBlock) {
       var completed = 'no'}
@@ -167,7 +166,7 @@ NoShuffleArray(array) {
                             'survey_completed': completed
                           }
 
-  console.log(body)
+  // console.log(body)
   fetch(`${API_URL}/participants_question_data/create/` + this.state.participant_info.participant_id + `/` + block_id + `/` + this.state.participant_info.prolific_id, {
        method: 'POST',
        headers: {
@@ -292,9 +291,6 @@ NoShuffleArray(array) {
   render() {
     return (
       <div className="QuizBlock">
-        <div className="QuizBlock-header">
-          <h2>{this.state.quizQuestionsBlock[this.state.counter].title}</h2>
-        </div>
         {this.state.result ? this.redirectToSurvey() : this.renderQuiz()} 
       </div>
     );
@@ -302,3 +298,10 @@ NoShuffleArray(array) {
 }
 
 export default QuizBlock;
+
+/*
+Section header 
+<div className="QuizBlock-header">
+          <h2>{this.state.quizQuestionsBlock[this.state.counter].title}</h2>
+        </div>
+*/ 

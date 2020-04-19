@@ -18,7 +18,7 @@ var quizQuestions = [
       qtype: "button", 
       questionId: 0,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
         {min: ""},
         {max: ""}
@@ -50,7 +50,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 1,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}
@@ -78,7 +78,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 2,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}
@@ -112,7 +112,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 3,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}
@@ -146,7 +146,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 4,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}
@@ -179,7 +179,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 5,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}]
@@ -210,7 +210,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 6,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}
@@ -243,7 +243,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 7,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}
@@ -276,7 +276,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 8,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}
@@ -309,7 +309,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 9,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}], 
@@ -344,7 +344,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 10,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}], 
@@ -378,7 +378,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 11,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}], 
@@ -412,7 +412,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 12,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}], 
@@ -453,7 +453,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 13,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}], 
@@ -492,7 +492,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 14,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}], 
@@ -532,7 +532,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 15,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}], 
@@ -571,7 +571,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 16,
       surveytag: 'iq',
-      title: 'Reasoning', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}], 

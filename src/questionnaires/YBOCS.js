@@ -13,10 +13,10 @@ var quizQuestions = [
               content: "Continue"
           }
           ],
-      qtype: "button", // to be maybe changed 
+      qtype: "button",  
       questionId: 0,
       surveytag: 'ybocs', 
-      title: 'Personal experience', // to be changed 
+      title: '',
       constraint: [
         {min: ""},
         {max: ""}
@@ -46,7 +46,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 1,
       surveytag: 'ybocs',
-      title: 'Personal experience', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}
@@ -76,7 +76,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 2,
       surveytag: 'ybocs',
-      title: 'Personal experience', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}
@@ -106,7 +106,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 3,
       surveytag: 'ybocs',
-      title: 'Personal experience', 
+      title: '', 
       constraint: [
        {min: ""},
        {max: ""}

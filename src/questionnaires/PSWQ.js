@@ -13,10 +13,10 @@ var quizQuestions = [
               content: "Continue"
           }
           ],
-      qtype: "button", // to be maybe changed
+      qtype: "button", 
       questionId: 0,
       surveytag: 'pswq',
-      title: 'Personal experience', // to be changed
+      title: '', 
       constraint: [
         {min: ""},
         {max: ""}
@@ -45,7 +45,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 1,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -74,7 +74,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 2,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -103,7 +103,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 3,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -132,7 +132,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 4,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -161,7 +161,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 5,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -190,7 +190,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 6,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -219,7 +219,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 7,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -248,7 +248,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 8,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -277,7 +277,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 9,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -306,7 +306,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 10,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -335,7 +335,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 11,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -365,7 +365,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 12,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -394,7 +394,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 13,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -423,7 +423,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 14,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -452,7 +452,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 15,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -481,7 +481,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 16,
       surveytag: 'pswq',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -490,5 +490,4 @@ var quizQuestions = [
 
 ]
 
-export default quizQuestions;
-
+export default quizQuestions; 

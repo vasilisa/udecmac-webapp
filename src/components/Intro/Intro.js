@@ -4,11 +4,8 @@ import {withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { API_URL } from '../../config';
 import { handleResponse } from '../helpers';
-
 import queryString from 'query-string';
-
 import './Intro.css';
-
 import './bootstrap.min.css';
 
 /*
@@ -16,27 +13,46 @@ Contains the INFORMATION for COVID-19 participants FROM THE ONLINE ETHICS
 */
 
 // Specify a SURVEY LIST HERE FOR SIMPLICITY 
-// Has to match the import names in the Survey.js 
-const survey_list = ['pad'] // ,'bis','hads','pss','pswq','ius','ybocs','demo','covid','iq','feedback'] 
-const n           =  survey_list.length-1;   
+// IMPORTANT: Has to match the import names in the Survey.js !!! 
+// THIS IS SURVEY_LIST FOR TIME POINT 1! 
+
+const survey_list = [
+// this goes on each time point 
+'hads', 
+'pss', 
+'pswq',
+'pad',
+// this are time point 1 specific
+'ius',
+'bis',  
+'covidknw',
+'covidbsl',
+'covidprotbeh',
+'covidinfos',
+'covidrisk',
+'covidpersimp',
+ 'iq' 
+] 
+
+const n =  survey_list.length-1;   
 
 class Intro extends React.Component {
   constructor(props) {
     super(props);
 
-    let url    = this.props.location.search; // URL from Prolific
-    // console.log(url) 
+    let url    = this.props.location.search;
+    console.log(url) 
     let params = queryString.parse(url);
 
-    console.log(params) 
-    const prolific_id = (params['PROLIFIC_PID']=== undefined ? 'test' : params['PROLIFIC_PID']) 
-    const study_id    = (params['STUDY_ID']=== undefined ? 'study_id' : params['STUDY_ID']) 
+    // console.log(params) 
+    const prolific_id = (params['PROLIFIC_PID']=== undefined ? 'undefined' : params['PROLIFIC_PID']) 
+    const study_id    = (params['STUDY_ID']=== undefined ? 'undefined' : params['STUDY_ID']) 
 
-    var currentDate = new Date(); // maybe change to local 
-    var date        = currentDate.getDate();
-    var month       = currentDate.getMonth(); //Be careful! January is 0 not 1
-    var year        = currentDate.getFullYear();
-    var dateString  = date + "-" +(month + 1) + "-" + year;
+    var currentDate   = new Date(); // maybe change to local 
+    var date          = currentDate.getDate();
+    var month         = currentDate.getMonth(); //Be careful! January is 0 not 1
+    var year          = currentDate.getFullYear();
+    var dateString    = date + "-" +(month + 1) + "-" + year;
     
   
    this.state = {
@@ -47,11 +63,11 @@ class Intro extends React.Component {
       block_number : 0, // has to be in the parent for Survey component for proper functioning 
       TotalBlock: n, // has to be in the parent for Survey component for proper functioning 
       date: dateString,
-      survey_list: survey_list, 
-      task: true  
+      survey_list: survey_list,
+      task: true   
   }
 
-  console.log(this.state.TotalBlock)
+  // console.log(this.state.TotalBlock)
 
     this.redirectToTarget.bind(this);
     this.fetchParticipantInfo.bind(this); 
@@ -81,7 +97,7 @@ class Intro extends React.Component {
            .then(handleResponse)
            .then((data) => {
              const participant_id_ = parseInt(data['new_participant_id'])
-             console.log(participant_id_)
+             // console.log(participant_id_)
 
              this.setState({
                      participant_id : participant_id_,
@@ -107,8 +123,8 @@ render() {
 
           <p><span className="bold">What will happen to me if I take part?</span></p> 
           <p>You will play one or more online computer games, which will last around [enter time as appropriate].</p> 
-          <p>You will receive £X.XX [THIS IS A FIXED PROLIFIC MONEY] for helping us.</p>
-          <p>Additionally, you can win a bonus of £1.00 based on your performance in the games.</p>   
+          <p>You will receive <span className="bold">£8.00</span> for helping us.</p>
+          <p>Additionally, you can win a bonus of <span className="bold">£1.00</span> based on your performance in the games.</p>   
           <p>You will also be asked some questions about yourself, your feelings, background, attitudes and behaviour in your everyday life.</p>
           <p>Remember, you are free to withdraw at any time without giving a reason.</p> 
           

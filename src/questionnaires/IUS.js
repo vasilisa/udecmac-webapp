@@ -13,10 +13,10 @@ var quizQuestions = [
               content: "Continue"
           }
           ],
-      qtype: "button", // to be maybe changed
+      qtype: "button",
       questionId: 0,
       surveytag: 'ius',
-      title: 'Personal experience', // to be changed
+      title: '', 
       constraint: [
         {min: ""},
         {max: ""}
@@ -45,7 +45,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 1,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -74,7 +74,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 2,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -103,7 +103,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 3,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -132,7 +132,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 4,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -161,7 +161,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 5,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -190,7 +190,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 6,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -219,7 +219,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 7,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -248,7 +248,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 8,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -277,7 +277,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 9,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -306,7 +306,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 10,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -335,7 +335,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 11,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -364,7 +364,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 12,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -393,7 +393,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 13,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -422,7 +422,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 14,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -451,7 +451,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 15,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -480,7 +480,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 16,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -509,7 +509,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 17,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -538,7 +538,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 18,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -567,7 +567,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 19,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -596,7 +596,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 20,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -625,7 +625,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 21,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -654,7 +654,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 22,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -683,7 +683,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 23,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -712,7 +712,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 24,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -741,7 +741,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 25,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -770,7 +770,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 26,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -799,7 +799,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 27,
       surveytag: 'ius',
-      title: 'Personal experience',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -809,5 +809,4 @@ var quizQuestions = [
 
 ]
 
-export default quizQuestions;
-
+export default quizQuestions; 

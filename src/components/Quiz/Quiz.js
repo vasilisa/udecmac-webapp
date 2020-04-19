@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransitionGroup } from 'react-transition-group';
 import Question from '../QuizQuestion/Question';
-import QuestionCount from '../QuizQuestion/QuestionCount';
 import AnswerOption from '../QuizQuestion/AnswerOption';
+import ProgressBar from '../QuizQuestion/ProgressBar';
+
 
 function Quiz(props) {
 
-  console.log(props.image) 
-  console.log(props.image_a) 
+  // console.log(props.image) 
+  // console.log(props.image_a) 
   
   
   function renderAnswerOptions(key) {
@@ -39,9 +40,9 @@ function Quiz(props) {
       transitionAppearTimeout={500}
       >
       <div key={props.questionCount}>
-        <QuestionCount counter={props.questionCount} total={props.questionTotal} />
+        <ProgressBar counter={props.questionCount} total={props.questionTotal}/>
+        <br></br>
         <Question content={props.question} />
-        
         <center>
         <div className="symbolframe">    
           <img className="quizImage" src={props.image} alt='quizImage'/> 
@@ -71,18 +72,18 @@ function Quiz(props) {
       transitionAppearTimeout={500}
       >
       <div key={props.questionCount}>
-        <QuestionCount counter={props.questionCount} total={props.questionTotal} />
-        <Question content={props.question} />
-        
         <center>
+        <ProgressBar counter={props.questionCount} total={props.questionTotal}/>
+        <br></br>
+        <Question content={props.question} />
         <div className="symbolframe">    
           <img className="quizImage" src={props.image} alt='quizImage'/> 
         </div>
-        </center>
         <p></p>
         <ul className="answerOptions">
           {props.answerOptions.map(renderAnswerOptions)}
         </ul>
+        </center>
       </div>
     </CSSTransitionGroup>);
   } 
@@ -103,10 +104,10 @@ else if (props.image===null) {
       transitionAppearTimeout={500}
       >
       <div key={props.questionCount}>
-        <QuestionCount counter={props.questionCount} total={props.questionTotal} />
-        <Question content={props.question} />
-        
         <center>
+        <ProgressBar counter={props.questionCount} total={props.questionTotal}/>
+        <br></br>
+        <Question content={props.question} />
         <div className="symbolframe">    
           <img className="quizImage" src={props.image_a} alt='quizImage'/> 
         </div>
@@ -131,11 +132,14 @@ else if (props.image===null) {
       transitionAppearTimeout={500}
       >
       <div key={props.questionCount}>
-        <QuestionCount counter={props.questionCount} total={props.questionTotal} />
-        <Question content={props.question} />
+      <center>
+        <ProgressBar counter={props.questionCount} total={props.questionTotal}/>
+        <br></br>
+        <Question content={props.question}/>
         <ul className="answerOptions">
           {props.answerOptions.map(renderAnswerOptions)}
         </ul>
+        </center>
       </div>
     </CSSTransitionGroup>);
 

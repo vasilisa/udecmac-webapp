@@ -43,7 +43,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 1,
       surveytag: 'demo',
-      title: 'Demographics',
+      title: '',
       constraint: [
        {min: ""},
        {max: ""}
@@ -79,7 +79,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 2,
       surveytag: 'demo',
-      title: 'Demographics',
+      title: '',
       constraint: [
         {min: ""},
         {max: ""}
@@ -112,7 +112,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 3,
       surveytag: 'demo',
-      title: 'Demographics',
+      title: '',
       constraint: [
         {min: ""},
         {max: ""}
@@ -180,7 +180,7 @@ var quizQuestions = [
           },
 
           {
-              type: "demo-13",
+              type: "demo-12",
               content: "Greater London"
           },
 
@@ -188,13 +188,13 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 4,
       surveytag: 'demo',
-      title: 'Demographics',
+      title: '',
       constraint: [
         {min: ""},
         {max: ""}
       ]
-}, 
 
+}, 
   {
       question: "How old are you?",
       answers: [
@@ -236,7 +236,7 @@ var quizQuestions = [
       qtype: 'quiz',
       questionId: 5,
       surveytag: 'demo',
-      title: 'Demographics',
+      title: '',
       constraint: [
         {min: ""},
         {max: ""}
@@ -265,7 +265,7 @@ var quizQuestions = [
       qtype: "quiz",
       questionId: 6,
       surveytag: 'demo',
-      title: 'Demographics',
+      title: '',
       constraint: [
         {min: ""},
         {max: ""}
@@ -288,7 +288,7 @@ var quizQuestions = [
       qtype: "quiz",
       questionId: 7,
       surveytag: 'demo',
-      title: 'Demographics',
+      title: '',
       constraint: [
         {min: ""},
         {max: ""}
@@ -296,6 +296,6 @@ var quizQuestions = [
   },
 
 
-];
+]
 
 export default quizQuestions;

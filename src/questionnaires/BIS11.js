@@ -14,10 +14,10 @@ var quizQuestions = [
               content: "Continue"
           }
           ],
-      qtype: "button", // to be maybe changed
+      qtype: "button", 
       questionId: 0,
       surveytag: 'bis',
-      title: 'Personal experience', // to be changed
+      title: '', 
       constraint: [
         {min: ""},
         {max: ""}
@@ -29,24 +29,24 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 						type: "bis-2",
-						content: "Occasionally"
-          },
-          {
-						type: "bis-3",
 						content: "Often"
           },
           {
+						type: "bis-3",
+						content: "Occasionally"
+          },
+          {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 1,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -59,24 +59,25 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
-          {
-						  type: "bis-2",
-						  content: "Occasionally"
-					},
+          
 					{
-						  type: "bis-3",
+						  type: "bis-2",
 						  content: "Often"
           },
           {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 2,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -91,22 +92,24 @@ var quizQuestions = [
               type: "bis-1",
               content: "Almost Always/Always"
           },
+
           {
 						  type: "bis-2",
-						  content: "Occasionally"
-					},
-					{
-						  type: "bis-3",
 						  content: "Often"
+          },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
           },
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 3,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -119,24 +122,25 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
-          {
-						  type: "bis-2",
-						  content: "Occasionally"
-					},
+
 					{
-						  type: "bis-3",
+						  type: "bis-2",
 						  content: "Often"
           },
           {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 4,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -149,7 +153,7 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 					  	type: "bis-2",
@@ -161,12 +165,12 @@ var quizQuestions = [
           },
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 5,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -178,24 +182,25 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
+
           {
 						  type: "bis-2",
-						  content: "Occasionally"
-					},
-					{
-						  type: "bis-3",
 						  content: "Often"
           },
           {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 6,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -208,24 +213,24 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 						  type: "bis-2",
-						  content: "Occasionally"
-					},
-					{
-						  type: "bis-3",
 						  content: "Often"
           },
           {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 7,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -238,24 +243,24 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 						  type: "bis-2",
-						  content: "Occasionally"
-					},
-					{
-						  type: "bis-3",
 						  content: "Often"
           },
           {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 8,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -268,24 +273,25 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 						  type: "bis-2",
-						  content: "Occasionally"
-					},
-					{
-						  type: "bis-3",
 						  content: "Often"
+          },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
           },
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 9,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -300,22 +306,24 @@ var quizQuestions = [
               type: "bis-1",
               content: "Almost Always/Always"
           },
+
           {
 						  type: "bis-2",
-						  content: "Occasionally"
-					},
-					{
-						  type: "bis-3",
 						  content: "Often"
+          },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
           },
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 10,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -328,24 +336,24 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
           },
           {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 11,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -358,24 +366,25 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
+          },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
           },
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 12,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -388,24 +397,26 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
           },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 13,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -420,22 +431,24 @@ var quizQuestions = [
               type: "bis-1",
               content: "Almost Always/Always"
           },
+
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
+          },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
           },
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 14,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -448,24 +461,25 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
+          },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
           },
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 15,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -478,24 +492,25 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
+          },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
           },
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 16,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -508,24 +523,25 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
+          },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
           },
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 17,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -538,24 +554,24 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
           },
           {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 18,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -568,24 +584,27 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
-						  type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
+							type: "bis-2",
 							content: "Often"
           },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          
+
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 19,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -597,24 +616,26 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
           },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 20,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -627,24 +648,26 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
           },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 21,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -656,24 +679,26 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
           },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 22,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -686,24 +711,26 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
           },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 23,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -716,24 +743,26 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
           },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 24,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -746,24 +775,26 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
           },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 25,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -776,24 +807,26 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
           },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 26,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -806,24 +839,26 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
-          {
+         	{
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
           },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 27,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -836,24 +871,26 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
           },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 28,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -865,24 +902,25 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
           },
           {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          
+          {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 29,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -895,24 +933,26 @@ var quizQuestions = [
       answers: [
           {
               type: "bis-1",
-              content: "Almost Always/Always"
+              content: "Almost Always / Always"
           },
           {
 							type: "bis-2",
-							content: "Occasionally"
-					},
-					{
-							type: "bis-3",
 							content: "Often"
           },
+
+          {
+              type: "bis-3",
+              content: "Occasionally"
+          },
+          
           {
               type: "bis-4",
-              content: "Rarely/Never"
+              content: "Rarely / Never"
           }
       ],
       questionId: 30,
       surveytag: 'bis',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -922,5 +962,4 @@ var quizQuestions = [
 
 ]
 
-export default quizQuestions;
-
+export default quizQuestions

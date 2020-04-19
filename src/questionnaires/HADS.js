@@ -17,7 +17,7 @@ var quizQuestions = [
       qtype: "button", // to be maybe changed
       questionId: 0,
       surveytag: 'hads',
-      title: 'Personal experience', // to be changed
+      title: '', // to be changed
       constraint: [
         {min: ""},
         {max: ""}
@@ -47,7 +47,7 @@ var quizQuestions = [
       ],
       questionId: 1,
       surveytag: 'hads',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -77,7 +77,7 @@ var quizQuestions = [
       ],
       questionId: 2,
       surveytag: 'hads',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -107,7 +107,7 @@ var quizQuestions = [
       ],
       questionId: 3,
       surveytag: 'hads',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -137,7 +137,7 @@ var quizQuestions = [
       ],
       questionId: 4,
       surveytag: 'hads',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -167,7 +167,7 @@ var quizQuestions = [
       ],
       questionId: 5,
       surveytag: 'hads',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -198,7 +198,7 @@ var quizQuestions = [
       ],
       questionId: 6,
       surveytag: 'hads',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -229,7 +229,7 @@ var quizQuestions = [
       ],
       questionId: 7,
       surveytag: 'hads',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -259,7 +259,7 @@ var quizQuestions = [
       ],
       questionId: 8,
       surveytag: 'hads',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -289,7 +289,7 @@ var quizQuestions = [
       ],
       questionId: 9,
       surveytag: 'hads',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -319,7 +319,7 @@ var quizQuestions = [
       ],
       questionId: 10,
       surveytag: 'hads',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -349,7 +349,7 @@ var quizQuestions = [
       ],
       questionId: 11,
       surveytag: 'hads',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -379,7 +379,7 @@ var quizQuestions = [
       ],
       questionId: 12,
       surveytag: 'hads',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -409,7 +409,7 @@ var quizQuestions = [
       ],
       questionId: 13,
       surveytag: 'hads',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -439,7 +439,7 @@ var quizQuestions = [
       ],
       questionId: 14,
       surveytag: 'hads',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -448,5 +448,4 @@ var quizQuestions = [
   },
 ]
 
-export default quizQuestions;
-
+export default quizQuestions; 

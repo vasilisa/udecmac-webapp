@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransitionGroup } from 'react-transition-group';
 import Question from '../QuizQuestion/Question';
-import QuestionCount from '../QuizQuestion/QuestionCount';
 import { Button } from 'react-bootstrap';
 
 
@@ -19,7 +18,6 @@ function ButtonQuiz(props) {
       transitionAppearTimeout={500}
     >
       <div key={props.questionCount}>
-        <QuestionCount counter={props.questionCount} total={props.questionTotal} />
         <Question content={props.question} />
       </div>
       <center>

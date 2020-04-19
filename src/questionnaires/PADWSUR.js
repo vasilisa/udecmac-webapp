@@ -21,7 +21,7 @@ var quizQuestions = [
       qtype: "button", // to be maybe changed
       questionId: 0,
       surveytag: 'pad',
-      title: 'Personal experience', // to be changed
+      title: '', // to be changed
       constraint: [
         {min: ""},
         {max: ""}
@@ -54,7 +54,7 @@ var quizQuestions = [
       ],
       questionId: 1,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -89,7 +89,7 @@ var quizQuestions = [
       ],
       questionId: 2,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -123,7 +123,7 @@ var quizQuestions = [
       ],
       questionId: 3,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -157,7 +157,7 @@ var quizQuestions = [
       ],
       questionId: 4,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -191,7 +191,7 @@ var quizQuestions = [
       ],
       questionId: 5,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -225,7 +225,7 @@ var quizQuestions = [
       ],
       questionId: 6,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -259,7 +259,7 @@ var quizQuestions = [
       ],
       questionId: 7,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -293,7 +293,7 @@ var quizQuestions = [
       ],
       questionId: 8,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -327,7 +327,7 @@ var quizQuestions = [
       ],
       questionId: 9,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -361,7 +361,7 @@ var quizQuestions = [
       ],
       questionId: 10,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -395,7 +395,7 @@ var quizQuestions = [
       ],
       questionId: 11,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -429,7 +429,7 @@ var quizQuestions = [
       ],
       questionId: 12,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -464,7 +464,7 @@ var quizQuestions = [
       ],
       questionId: 13,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -498,7 +498,7 @@ var quizQuestions = [
       ],
       questionId: 14,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -532,7 +532,7 @@ var quizQuestions = [
       ],
       questionId: 15,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -566,7 +566,7 @@ var quizQuestions = [
       ],
       questionId: 16,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -600,7 +600,7 @@ var quizQuestions = [
       ],
       questionId: 17,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -634,7 +634,7 @@ var quizQuestions = [
       ],
       questionId: 18,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -668,7 +668,7 @@ var quizQuestions = [
       ],
       questionId: 19,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -702,7 +702,7 @@ var quizQuestions = [
       ],
       questionId: 20,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -736,7 +736,7 @@ var quizQuestions = [
       ],
       questionId: 21,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -770,7 +770,7 @@ var quizQuestions = [
       ],
       questionId: 22,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -805,7 +805,7 @@ var quizQuestions = [
       ],
       questionId: 23,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -839,7 +839,7 @@ var quizQuestions = [
       ],
       questionId: 24,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -873,7 +873,7 @@ var quizQuestions = [
       ],
       questionId: 25,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -907,7 +907,7 @@ var quizQuestions = [
       ],
       questionId: 26,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -941,7 +941,7 @@ var quizQuestions = [
       ],
       questionId: 27,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -975,7 +975,7 @@ var quizQuestions = [
       ],
       questionId: 28,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -1009,7 +1009,7 @@ var quizQuestions = [
       ],
       questionId: 29,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -1043,7 +1043,7 @@ var quizQuestions = [
       ],
       questionId: 30,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -1076,7 +1076,7 @@ var quizQuestions = [
       ],
       questionId: 31,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -1110,7 +1110,7 @@ var quizQuestions = [
       ],
       questionId: 32,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -1144,7 +1144,7 @@ var quizQuestions = [
       ],
       questionId: 33,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -1178,7 +1178,7 @@ var quizQuestions = [
       ],
       questionId: 34,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -1212,7 +1212,7 @@ var quizQuestions = [
       ],
       questionId: 35,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -1246,7 +1246,7 @@ var quizQuestions = [
       ],
       questionId: 36,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -1281,7 +1281,7 @@ var quizQuestions = [
       ],
       questionId: 37,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -1315,7 +1315,7 @@ var quizQuestions = [
       ],
       questionId: 38,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -1349,7 +1349,7 @@ var quizQuestions = [
       ],
       questionId: 39,
       surveytag: 'pad',
-      title: 'Personal experience',
+      title: '',
       qtype:"quiz",
       constraint: [
         {min: ""},
@@ -1357,7 +1357,8 @@ var quizQuestions = [
       ]
   },
 
+
+
 ]
 
-export default quizQuestions;
-
+export default quizQuestions; 
