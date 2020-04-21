@@ -18,13 +18,16 @@ Contains the INFORMATION for COVID-19 participants FROM THE ONLINE ETHICS
 
 const survey_list = [
 // this goes on each time point 
+'demo', 
+'pswq',
+'pad',
 'hads', 
 'pss', 
 'pswq',
-'pad',
 // this are time point 1 specific
 'ius',
-'bis',  
+'bis',
+'ybocs',   
 'covidknw',
 'covidbsl',
 'covidprotbeh',
@@ -32,8 +35,8 @@ const survey_list = [
 'covidrisk',
 'covidpersimp',
  'iq' 
-] 
-
+ ] 
+ 
 const n =  survey_list.length-1;   
 
 class Intro extends React.Component {
