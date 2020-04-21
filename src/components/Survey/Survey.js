@@ -175,7 +175,8 @@ class Survey extends React.Component {
     if (this.props.location.state.participant_info.task = true) {
       alert("You will now be redirected to the experimental game. Please, confirm leaving the page. Thank you!")
       // create a flexible link including prolific id, study id longit and participant ids and redirect to the external 
-      window.location = 'http://localhost:5000/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id 
+      // window.location = 'http://localhost:5000/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id 
+      window.location = 'https://udecmac.osc-fr1.scalingo.io/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id 
 
     }
     else {
