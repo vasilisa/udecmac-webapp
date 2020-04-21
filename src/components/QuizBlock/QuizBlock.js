@@ -204,6 +204,11 @@ NoShuffleArray(array) {
           onAnswerSelected={this.handleAnswerSelected}
           image           ={this.state.image}
           image_a         ={this.state.image_a}
+
+          // Add line for the part of the study: NEW 
+          survey_part     ={this.state.participant_info.block_number+1}
+          surveyTotal     ={this.state.participant_info.TotalBlock+1}
+     
           
         />
       );
@@ -222,6 +227,10 @@ NoShuffleArray(array) {
           questionTotal   ={this.state.quizQuestionsBlock.length}
           onAnswerSelected={this.handleAnswerSelected}
           constraint      ={this.state.constraint}
+          // Add line for the part of the study: NEW 
+          survey_part     ={this.state.participant_info.block_number+1}
+          surveyTotal     ={this.state.participant_info.TotalBlock+1}
+     
         />
       );
   }
@@ -239,6 +248,10 @@ NoShuffleArray(array) {
           questionTotal   ={this.state.quizQuestionsBlock.length}
           onAnswerSelected={this.handleAnswerSelected}
           constraint      ={this.state.constraint}
+          // Add line for the part of the study: NEW 
+          survey_part     ={this.state.participant_info.block_number+1}
+          surveyTotal     ={this.state.participant_info.TotalBlock+1}
+     
       />
     );
   }
@@ -255,6 +268,10 @@ NoShuffleArray(array) {
           questionTotal   ={this.state.quizQuestionsBlock.length}
           onAnswerSelected={this.handleAnswerSelected}
           constraint      ={this.state.constraint}
+          // Add line for the part of the study: NEW 
+          survey_part     ={this.state.participant_info.block_number+1}
+          surveyTotal     ={this.state.participant_info.TotalBlock+1}
+     
       />
     );
   }
@@ -268,6 +285,10 @@ NoShuffleArray(array) {
           question        ={this.state.question}
           questionTotal   ={this.state.quizQuestionsBlock.length}
           onAnswerSelected={this.handleAnswerSelected}
+          // Add line for the part of the study: NEW 
+          survey_part     ={this.state.participant_info.block_number+1}
+          surveyTotal     ={this.state.participant_info.TotalBlock+1}
+     
       />
     );
   }
@@ -283,6 +304,9 @@ NoShuffleArray(array) {
           question        ={this.state.question}
           questionTotal   ={this.state.quizQuestionsBlock.length}
           onAnswerSelected={this.handleAnswerSelected}
+          // Add line for the part of the study: NEW 
+          survey_part     ={this.state.participant_info.block_number+1}
+          surveyTotal     ={this.state.participant_info.TotalBlock+1}
       />
     );
   }

@@ -34,7 +34,7 @@ const survey_list = [
  'iq' 
 ] 
 
-const n =  survey_list.length-1;   
+// const n =  survey_list.length-1;   
 
 class Intro extends React.Component {
   constructor(props) {

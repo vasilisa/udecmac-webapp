@@ -575,7 +575,7 @@ var quizQuestions = [
       constraint: [
        {min: ""},
        {max: ""}], 
-       image: "rsd6_q.png" 
+       image: "rsd8_q.png" 
       
   },
 
