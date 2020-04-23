@@ -118,31 +118,37 @@ render() {
           <p><span className="bold">INFORMATION FOR THE PARTICIPANT</span></p>
           <p><span className="bold">Who is conducting this research study?</span></p>
           <p>This research is being conducted by the Wellcome Centre for Human Neuroimaging and the Max Planck UCL Centre for Computational Psychiatry and Ageing Research.</p>
-          <p>The lead researcher(s) for this project is Alisa Loosen (a.loosen.17@ucl.ac.uk), Vasilisa Skvortsova, Dr, (v.skvortsova@ucl.ac.uk) and Tobias Hauser, Dr, (t.hauser@ucl.ac.uk).</p>
+          <p>The lead researchers for this project are Alisa Loosen (a.loosen.17@ucl.ac.uk), MSc, Vasilisa Skvortsova, Dr, (v.skvortsova@ucl.ac.uk) and Tobias Hauser, Dr, (t.hauser@ucl.ac.uk).</p>
           <p>This study has been approved by the UCL Research Ethics Committee (project ID number 15301\001) and funded by the Wellcome Trust.</p>
           <p><span className="bold">What is the purpose of this study?</span></p>
           <p>We are interested in how the adult brain controls learning and decision-making. This research aims to provide insights into how the healthy brain works to help us understand the causes of a number of different medical conditions.</p>
-          
-
+          <p><span className="bold"></span></p>
+          <p>Adults (aged 18 years or over).</p>
           <p><span className="bold">What will happen to me if I take part?</span></p> 
-          <p>You will play one or more online computer games, which will last around [enter time as appropriate].</p> 
-          <p>You will receive <span className="bold">£8.00</span> for helping us.</p>
-          <p>Additionally, you can win a bonus of <span className="bold">£1.00</span> based on your performance in the games.</p>   
+          <p>You will play one or more online computer games, which will last around approximately 20 minutes.</p> 
+          <p>You will receive between <span className="bold">£8.25</span> and <span className="bold">£9.25</span> for helping us.</p>
+          
+          <p>The amount could vary based on the decisions you make in the game.</p> 
           <p>You will also be asked some questions about yourself, your feelings, background, attitudes and behaviour in your everyday life.</p>
+          <p>There will also be some questions about reasoning.</p>
           <p>Remember, you are free to withdraw at any time without giving a reason.</p> 
           
-        
+          <p><span className="bold">What are the possible disadvantages and risks of taking part?</span></p>
+          <p>The task you complete does not pose any known risks.</p>
+          <p>You will be asked to answer some questions about mood and feelings, and we will provide information about ways to seek help should you feel affected by the issues raised by these questions.</p>
+
           <p><span className="bold">What are the possible benefits of taking part?</span></p>
           <p>While there are no immediate benefits to taking part, your participation in this research will help us understand how people make decisions and this could have benefits for our understanding of mental health problems.</p> 
           <p><span className="bold">Complaints</span></p>
           <p>If you wish to complain or have any concerns about any aspect of the way you have been approached or treated by members of staff, then the research UCL complaints mechanisms are available to you.</p>
           <p>In the first instance, please talk to the researcher or the chief investigator (Dr Tobias Hauser, t.hauser@ucl.ac.uk) about your complaint.</p>
-        
+          
+          <p><span className="bold">Complaints</span></p>
+          <p>If you wish to complain or have any concerns about any aspect of the way you have been approached or treated by members of staff, then the research UCL complaints mechanisms are available to you.</p>
+          <p>In the first instance, please talk to the researcher or the chief investigator (Dr Tobias Hauser, t.hauser@ucl.ac.uk) about your complaint.</p>
           <p>If you feel that the complaint has not been resolved satisfactorily, please contact the chair of the UCL Research Ethics Committee (ethics@ucl.ac.uk).</p>
-        
           <p>If you are concerned about how your personal data are being processed please contact the data controller who is UCL: data-protection@ucl.ac.uk.</p>
           <p>If you remain unsatisfied, you may wish to contact the Information Commissioner’s Office (ICO).</p>
-        
           <p>Contact details, and details of data subject rights, are available on the ICO website <a style={{display: "table-cell"}} href="https://ico.org.uk/for-organisations/data-protection-reform/overview-of-the-gdpr/individuals-rights" target="_blank">here</a></p> 
           
           <p><span className="bold">What about my data?</span></p>

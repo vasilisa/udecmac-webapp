@@ -253,7 +253,7 @@ render()
 
     else
     {
-          text = '... CONTINUE ...'
+          text = 'Thanks a lot for you input so far, please continue with the next section'
         return (
       <div>
       <center>

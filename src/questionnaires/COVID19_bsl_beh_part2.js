@@ -16,7 +16,7 @@ var quizQuestions = [
           }
           ],
       qtype: "button",
-      questionId: 1,
+      questionId: 0,
       surveytag: 'covidbsl',
       title: '', 
       constraint: [
@@ -45,7 +45,7 @@ var quizQuestions = [
         content: "5 - Always"},
       ],
       qtype: 'quiz',
-      questionId: 2,
+      questionId: 1,
       surveytag: 'covidbsl',
       title: '',
       constraint: [
@@ -74,7 +74,7 @@ var quizQuestions = [
         content: "5 - Always"},
       ],
       qtype: 'quiz',
-      questionId: 3,
+      questionId: 2,
       surveytag: 'covidbsl',
       title: '',
       constraint: [
@@ -103,7 +103,7 @@ var quizQuestions = [
         content: "5 - Always"},
       ],
       qtype: 'quiz',
-      questionId: 4,
+      questionId: 3,
       surveytag: 'covidbsl',
       title: '',
       constraint: [
@@ -133,7 +133,7 @@ var quizQuestions = [
         content: "5 - Always"},
       ],
       qtype: 'quiz',
-      questionId: 5,
+      questionId: 4,
       surveytag: 'covidbsl',
       title: '',
       constraint: [
@@ -162,7 +162,7 @@ var quizQuestions = [
         content: "5 - Always"},
       ],
       qtype: 'quiz',
-      questionId: 6,
+      questionId: 5,
       surveytag: 'covidbsl',
       title: '',
       constraint: [
@@ -182,7 +182,7 @@ var quizQuestions = [
 
         ],
         qtype: 'checkbox',
-        questionId: 7,
+        questionId: 6,
         surveytag: 'covidbsl',
         title: '',
         constraint: [
@@ -211,7 +211,7 @@ var quizQuestions = [
         content: "5 - A lot"},
       ],
       qtype: 'quiz',
-      questionId: 8,
+      questionId: 7,
       surveytag: 'covidbsl',
       title: '',
       constraint: [
@@ -240,7 +240,7 @@ var quizQuestions = [
         content: "5 - A lot"},
       ],
       qtype: 'quiz',
-      questionId: 9,
+      questionId: 8,
       surveytag: 'covidbsl',
       title: '',
       constraint: [
@@ -269,7 +269,7 @@ var quizQuestions = [
         content: "5 - A lot"},
       ],
       qtype: 'quiz',
-      questionId: 10,
+      questionId: 9,
       surveytag: 'covidbsl',
       title: '',
       constraint: [
@@ -286,7 +286,7 @@ var quizQuestions = [
         content: " "
       }],
       qtype: 'report',
-      questionId: 11,
+      questionId: 10,
       surveytag: 'covidbsl',
       title: '',
       constraint: [

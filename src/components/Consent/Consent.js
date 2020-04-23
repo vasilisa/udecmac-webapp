@@ -190,8 +190,9 @@ createCheckBoxes(){
       transitionAppear
       transitionAppearTimeout={500}
     >
-        
-        <div className="IntroConsentText">
+      <div className="IntroConsentText">
+          <p>If you are happy to proceed please read the statement below and click the boxes to show that you consent to this study proceeding.</p>
+          <br></br>
           {consents.map(this.createCheckBox)} 
         </div>
       

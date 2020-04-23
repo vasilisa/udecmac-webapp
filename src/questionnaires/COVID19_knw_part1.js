@@ -1,9 +1,8 @@
 var quizQuestions = [
 
 /*
-  Custom-Based questions for COVID-19 study: KNOWLEDGE
+  Custom-Based questions for COVID-19 study
   by VS March 2020
-  AT EACH TIME POINT 
 */
 
 {
@@ -11,8 +10,8 @@ var quizQuestions = [
 
   answers: [
           {
-            type: "Continue",
-            content: "Continue"
+              type: "Continue",
+              content: "Continue"
           }
           ],
       qtype: "button", 
@@ -108,7 +107,7 @@ var quizQuestions = [
         content: "People who have serious chronic diabetes"},
 
         {type: "covid-8",
-        content: "Whole who have serious lung disease"},
+        content: "People who have serious lung disease"},
 
         {type: "covid-9",
         content: "Pregnant women"},
@@ -272,6 +271,7 @@ var quizQuestions = [
        {max: ""}
       ]
   },
+
 ]
 
-export default quizQuestions;
+export default quizQuestions; 
