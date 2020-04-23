@@ -34,7 +34,8 @@ const survey_list = [
 'covidinfos',
 'covidrisk',
 'covidpersimp',
- 'iq' 
+'demo', 
+'iq' 
  ] 
  
 const n =  survey_list.length-1;   
@@ -122,7 +123,7 @@ render() {
           <p>This study has been approved by the UCL Research Ethics Committee (project ID number 15301\001) and funded by the Wellcome Trust.</p>
           <p><span className="bold">What is the purpose of this study?</span></p>
           <p>We are interested in how the adult brain controls learning and decision-making. This research aims to provide insights into how the healthy brain works to help us understand the causes of a number of different medical conditions.</p>
-          <p><span className="bold"></span></p>
+          <p><span className="bold">Who can take part in this study?</span></p>
           <p>Adults (aged 18 years or over).</p>
           <p><span className="bold">What will happen to me if I take part?</span></p> 
           <p>You will play one or more online computer games, which will last around approximately 20 minutes.</p> 
@@ -139,9 +140,6 @@ render() {
 
           <p><span className="bold">What are the possible benefits of taking part?</span></p>
           <p>While there are no immediate benefits to taking part, your participation in this research will help us understand how people make decisions and this could have benefits for our understanding of mental health problems.</p> 
-          <p><span className="bold">Complaints</span></p>
-          <p>If you wish to complain or have any concerns about any aspect of the way you have been approached or treated by members of staff, then the research UCL complaints mechanisms are available to you.</p>
-          <p>In the first instance, please talk to the researcher or the chief investigator (Dr Tobias Hauser, t.hauser@ucl.ac.uk) about your complaint.</p>
           
           <p><span className="bold">Complaints</span></p>
           <p>If you wish to complain or have any concerns about any aspect of the way you have been approached or treated by members of staff, then the research UCL complaints mechanisms are available to you.</p>
