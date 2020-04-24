@@ -6,7 +6,7 @@ var quizQuestions = [
 */
 
 {
-  question: "Tick the box that is the closest to how you have been feeling in the PAST WEEKS. Don't take too long over your replies: your immediate is best",
+  question: "Tick the box that is the closest to how you have been feeling in the PAST WEEK. Don't take too long over your replies: your immediate is best",
 
   answers: [
           {
@@ -388,7 +388,7 @@ var quizQuestions = [
   },
 
   {
-      question: "I can sit at ease and feel relaxed", 
+      question: "I can sit at ease and feel relaxed",
       answers: [
           {
               type: "hads-1",
@@ -448,4 +448,4 @@ var quizQuestions = [
   },
 ]
 
-export default quizQuestions; 
+export default quizQuestions;

@@ -19,7 +19,6 @@ Contains the INFORMATION for COVID-19 participants FROM THE ONLINE ETHICS
 const survey_list = [
 // this goes on each time point 
 'demo', 
-'pswq',
 'pad',
 'hads', 
 'pss', 

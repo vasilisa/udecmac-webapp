@@ -195,7 +195,7 @@ render()
     { 
       text = <div className='SurveyIntroText'> <p>Dear Participant,</p>
       <p>Thank you for taking part in our study!</p>
-      <p>The current study investigating ‘decision-making in time of uncertainty’ will take about X minutes.</p> 
+      <p>The current study investigating ‘decision-making in time of uncertainty’ will take about 60 minutes.</p> 
       <p>You will be asked to complete several questionnaires and play a decision-making task.</p>
       <p>Please do not start until you will have enough time to complete it in one go.</p>
       <p>Please close other programs (e.g. chat or e-mail) to avoid distractions.</p>
