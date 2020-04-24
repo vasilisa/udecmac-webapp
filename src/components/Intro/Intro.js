@@ -33,7 +33,6 @@ const survey_list = [
 'covidinfos',
 'covidrisk',
 'covidpersimp',
-'demo', 
 'iq' 
  ] 
  
