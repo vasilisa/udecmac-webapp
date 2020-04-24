@@ -181,7 +181,7 @@ var quizQuestions = [
           content: "Yes"},
 
         ],
-        qtype: 'checkbox',
+        qtype: 'quiz',
         questionId: 6,
         surveytag: 'covidbsl',
         title: '',
