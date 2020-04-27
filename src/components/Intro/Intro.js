@@ -130,6 +130,9 @@ render() {
           <p>The amount could vary based on the decisions you make in the game.</p> 
           <p>You will also be asked some questions about yourself, your feelings, background, attitudes and behaviour in your everyday life.</p>
           <p>There will also be some questions about reasoning.</p>
+          <p>For this experiment we are interested in multiple different processes in learning and decision-making.</p>
+          <p>After you complete this session, we will invite you to participate in further sessions.</p>
+          <p>You will be compensated after completion of each session with <span className="bold">£8.25/h</span>  and if you participate in the whole experiment you will receive a total of <span className="bold">£16.50</span>.</p>
           <p>Remember, you are free to withdraw at any time without giving a reason.</p> 
           
           <p><span className="bold">What are the possible disadvantages and risks of taking part?</span></p>
@@ -148,15 +151,21 @@ render() {
           <p>Contact details, and details of data subject rights, are available on the ICO website <a style={{display: "table-cell"}} href="https://ico.org.uk/for-organisations/data-protection-reform/overview-of-the-gdpr/individuals-rights" target="_blank">here</a></p> 
           
           <p><span className="bold">What about my data?</span></p>
+          <p>This ‘local’ privacy notice sets out the information that applies to this particular study.</p>
+          <p>Further information on how UCL uses participant information can be found in our ‘general’ privacy notice:</p>
+          <p>For participants in research studies, click here
+          <p>The information that is required to be provided to participants under data protection legislation (GDPR and DPA 2018) is provided across both the ‘local’ and ‘general’ privacy notices.</p>
           <p>To help future research and make the best use of the research data you have given us (such as answers to questionnaires) we may keep your research data indefinitely and share these.</p>
           <ul>
           <p>The data we collect will be shared and held as follows:</p>
           <p></p>
           <li>{}In publications, your data will be anonymised, so you cannot be identified.</li> 
           <p></p>
-          <li>{}In public databases, your data will be anonymised</li> 
+          <li>{}In public databases, your data will be anonymised or pseudonymised (your personal details will be removed, and a code used e.g. 00001232, instead of your User ID)</li> 
           <p></p>
           <li>{}We do not collect any personal data that could be used to identify you</li> 
+          <p></p>
+          <li>{}Personal data is any information that could be used to identify you, such as your User ID. Your User ID will be used to combine datasets from the different timepoints at which you complete tasks for this study. Once you complete the final task in this study, we will replace your User ID with a randomly generated ID that is non identifying.</li> 
           </ul>
           <p>The legal basis used to process your personal data will be the provision of public task (this means that the research you are taking part in is deemed to be in the public interest).</p> 
           <p>The legal basis used to process special category data (i.e. ethnicity) will be for scientific research purposes. We will follow the UCL and legal guidelines to safeguard your data.</p>
