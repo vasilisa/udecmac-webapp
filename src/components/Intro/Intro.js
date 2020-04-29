@@ -24,8 +24,8 @@ const survey_list = [
 'pss', 
 'pswq',
 // this are time point 1 specific
-'ius',
-'bis',
+// 'ius', -> moved to the 2nd time point 
+// 'bis', -> moved to the 2nd time point 
 'ybocs',   
 'covidknw',
 'covidbsl',
