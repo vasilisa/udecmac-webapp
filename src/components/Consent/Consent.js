@@ -11,24 +11,32 @@ const consents = [
     type: 'checkBox1',
   },
   {
+    content: 'I consent to the processing of my personal information (e.g. User Id) for the purposes of this research study. I understand that such information will remain confidential and will be handled in accordance with all applicable data protection legislation and ethical standards in research. These data will only be accessible to the study team and individuals from the University and Funder who are responsible for monitoring and audits.',
     type: 'checkBox2',
+  },
+  {
+    content: 'I consent to being re-contacted for the purposes of this research study.',
+    type: 'checkBox3',
+  },
+  {
+    type: 'checkBox4',
     content: 'I understand that my anonymised personal data can be shared with others for future research, shared in public databases and in scientific reports.',
   },
 
   {
-    type: 'checkBox3',
+    type: 'checkBox5',
     content: 'I understand that I am free to withdraw from this study at any time without giving a reason and this will not affect my future medical care or legal rights.',
   },
   {
-    type: 'checkBox4',
+    type: 'checkBox6',
     content: 'I understand the potential benefits and risks of participating, the support available to me should I become distressed during the research, and who to contact if I wish to lodge a complaint.',
   },
   {
-    type: 'checkBox5',
+    type: 'checkBox7',
     content: 'I understand the inclusion and exclusion criteria in the Information Sheet and as explained to me by the researcher.  I confirm that I do not fall under the exclusion criteria.',
 },
   {
-    type: 'checkBox6',
+    type: 'checkBox8',
     content: 'I agree that the research project named above has been explained to me to my satisfaction and I agree to take part in this study.',
   },
 ];
