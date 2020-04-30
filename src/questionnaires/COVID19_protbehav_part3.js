@@ -264,14 +264,14 @@ var quizQuestions = [
   },
 
   {
-      question:"What is your current isolation status? By ‘self-isolation’ we mean staying at home and avoiding contact to people in- and outside your household. This also means not leaving the house unless it is unavoidable (e.g. no food or medicine delivery possible, medical appointment).",
+      question:"What is your current isolation status?",
 
       answers: [{
          type: "covid-1",
         content: "I am living my life as normal"},
 
         {type: "covid-2",
-        content: "I only go out once a day for one essential activity (e.g. getting groceries, medicine) or exercise"},
+        content: "I only go out for essential activities (e.g. getting groceries or medicine, for one exercise a day)"},
 
         {type: "covid-3",
         content: "I never leave the house"},
