@@ -9,9 +9,9 @@ import * as pad from '../../questionnaires/PADWSUR';
 import * as hads from '../../questionnaires/HADS';
 import * as pss from '../../questionnaires/PSS';
 import * as pswq from '../../questionnaires/PSWQ';
-import * as ius from '../../questionnaires/IUS';
-import * as bis from '../../questionnaires/BIS11';
-// import * as feedback from '../../questionnaires/FEEDBACK';
+// import * as ius from '../../questionnaires/IUS'; -> for the 2nd part not used right now 
+// import * as bis from '../../questionnaires/BIS11'; -> for the 2nd part not used right now 
+// import * as feedback from '../../questionnaires/FEEDBACK'; 
 import * as iq from '../../questionnaires/IQ';
 // Questions specific for part 1 COVID19: 
 import * as covidknw from '../../questionnaires/COVID19_knw_part1.js';
@@ -33,8 +33,8 @@ var quizData = {
   hads: hads, 
   pss: pss,
   pswq: pswq,
-  bis: bis,
-  ius: ius,  
+  // bis: bis, -> for the 2nd part not used right now 
+  // ius: ius, -> for the 2nd part not used right now  
   demo: demo,
   ybocs: ybocs, 
   iq:iq 
