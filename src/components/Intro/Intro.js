@@ -136,7 +136,7 @@ render() {
           <p>You will also be asked some questions about yourself, your feelings, background, attitudes and behaviour in your everyday life.</p>
           <p>There will also be some questions about reasoning.</p>
           <p>For this experiment we are interested in multiple different processes in learning and decision-making.</p>
-          <p>After you complete this session, we will invite you to participate in further sessions. You will be compensated after completion of each session with <span className="bold">£8.25/h</span> and if you participate in the whole experiment you will receive a total of <span className="bold">£20.62</span>.</p>
+          <p>After you complete this session, we will invite you to participate in further sessions. You will be compensated after completion of each session with <span className="bold">£8.25/h</span> and if you participate in the whole experiment you will receive a total of <span className="bold">approximately £20</span>.</p>
           <p>Remember, you are free to withdraw at any time without giving a reason.</p> 
           
           <p><span className="bold">What are the possible disadvantages and risks of taking part?</span></p>
@@ -157,9 +157,8 @@ render() {
           <p><span className="bold">What about my data?</span></p>
           <p>This ‘local’ privacy notice sets out the information that applies to this particular study.</p>
           <p>Further information on how UCL uses participant information can be found in our ‘general’ privacy notice:</p>
-          <p>For participants in research studies, click 
-          <a href="https://www.ucl.ac.uk/legal-services/privacy/ucl-general-research-participant-privacy-notice"
-           title="here">the Mozilla homepage</a>.</p>
+          <p>For participants in research studies, click <a style={{display: "table-cell"}} href="https://www.ucl.ac.uk/legal-services/privacy/ucl-general-research-participant-privacy-notice" target="_blank">here</a></p> 
+          
           <p> The information that is required to be provided to participants under data protection legislation (GDPR and DPA 2018) is provided across both the ‘local’ and ‘general’ privacy notices.</p>
           <p>To help future research and make the best use of the research data you have given us (such as answers to questionnaires) we may keep your research data indefinitely and share these.</p>
           <ul>
