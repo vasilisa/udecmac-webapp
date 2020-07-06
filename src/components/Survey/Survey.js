@@ -2,42 +2,25 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import {withRouter} from 'react-router-dom';
 
-// import other questionnaires the same way 
-import * as demo  from '../../questionnaires/DEMO'; 
-import * as ybocs from '../../questionnaires/YBOCS'; 
-import * as pad from '../../questionnaires/PADWSUR';
+// import other questionnaires the same way
+import * as ocir from '../../questionnaires/OCIR'; 
 import * as hads from '../../questionnaires/HADS';
-import * as pss from '../../questionnaires/PSS';
-import * as pswq from '../../questionnaires/PSWQ';
-import * as ius from '../../questionnaires/IUS';
-import * as bis from '../../questionnaires/BIS11';
-// import * as feedback from '../../questionnaires/FEEDBACK';
-import * as iq from '../../questionnaires/IQ';
-// Questions specific for part 1 COVID19: 
-import * as covidknw from '../../questionnaires/COVID19_knw_part1.js';
-import * as covidbsl from '../../questionnaires/COVID19_bsl_beh_part2.js';
+import * as pad from '../../questionnaires/PADWSUR';
+import * as feedback from '../../questionnaires/FEEDBACK';
+// Questions specific for part 1 COVID19:
 import * as covidprotbeh from '../../questionnaires/COVID19_protbehav_part3.js';
 import * as covidinfos from '../../questionnaires/COVID19_infos_part4.js';
-import * as covidrisk from '../../questionnaires/COVID19_riskperc_part5.js';
 import * as covidpersimp from '../../questionnaires/COVID19_persimp_part6.js';
 
 
 var quizData = {
-  covidknw: covidknw,
-  covidbsl: covidbsl,
   covidprotbeh: covidprotbeh,
   covidinfos: covidinfos,
-  covidrisk: covidrisk,
   covidpersimp: covidpersimp,
+  ocir: ocir,
   pad: pad,
-  hads: hads, 
-  pss: pss,
-  pswq: pswq,
-  bis: bis,
-  ius: ius,  
-  demo: demo,
-  ybocs: ybocs, 
-  iq:iq 
+  hads: hads,
+  feedback: feedback
 }
 
 
@@ -62,32 +45,32 @@ class Survey extends React.Component {
   constructor(props){
     super(props);
 
-    // Information about a specific block of the Survey: 
+    // Information about a specific block of the Survey:
     const block_info = {
-      surveytag  : this.props.location.state.participant_info.survey_list[0], // First questionnaire in the list 
+      surveytag  : this.props.location.state.participant_info.survey_list[0], // First questionnaire in the list
      }
 
     this.state = {
       participant_info : this.props.location.state.participant_info,
       block_info       : block_info,
-      newblock_frame   : this.props.location.state.newblock_frame,  
+      newblock_frame   : this.props.location.state.newblock_frame,
       questions        : quizData[this.props.location.state.participant_info.survey_list[0]].default,
-      finished         : false, 
+      finished         : false,
     }
 
-   
+
     this.getSurveyBlock.bind(this);
-    this.redirectToQuiz.bind(this); 
-    this.redirectToEnd.bind(this); // TO BE CHANGED 
+    this.redirectToQuiz.bind(this);
+    this.redirectToEnd.bind(this); 
     this._isMounted = false;
-    this._handleGoBack.bind(this); 
-    this._handleTimeOut.bind(this);   
+    this._handleGoBack.bind(this);
+    this._handleTimeOut.bind(this);
   }
 
 
   redirectToQuiz () {
       if((this.props.location.state.participant_info.block_number <= (this.props.location.state.participant_info.TotalBlock)))
-          {           
+          {
           if (this.state.newblock_frame){ // TRUE
           this.setState({newblock_frame : false})
 
@@ -99,35 +82,35 @@ class Survey extends React.Component {
                    questions       : this.state.questions,
                  }
           })}
-          else // FALSE 
+          else // FALSE
           {
             if (this._isMounted)
             {
 
               // console.log('Block number',this.props.location.state.participant_info.block_number)
-              
-              if (this.props.location.state.participant_info.block_number===this.props.location.state.participant_info.TotalBlock){ // just finished the LAST BLOCK 
-              
-                // redirect to the final 
+
+              if (this.props.location.state.participant_info.block_number===this.props.location.state.participant_info.TotalBlock){ // just finished the LAST BLOCK
+
+                // redirect to the final
                 this.setState({finished: true})
 
-              } 
-              else if (this.props.location.state.participant_info.block_number<this.props.location.state.participant_info.TotalBlock){ // just finished the LAST BLOCK 
-              
+              }
+              else if (this.props.location.state.participant_info.block_number<this.props.location.state.participant_info.TotalBlock){ // just finished the LAST BLOCK
+
               const newblocknumber = this.props.location.state.participant_info.block_number + 1
               // console.log(newblocknumber)
               this.getSurveyBlock(newblocknumber,this.props.location.state.participant_info.survey_list)
-              this.setState({newblock_frame: true, participant_info : {...this.state.participant_info, block_number:newblocknumber},}) 
+              this.setState({newblock_frame: true, participant_info : {...this.state.participant_info, block_number:newblocknumber},})
               }
 
             }
           }
         }
       }
-    
-  componentDidMount() { 
+
+  componentDidMount() {
   this._isMounted = true;
-  document.body.style.background= '#fff'; 
+  document.body.style.background= '#fff';
   // this._isMounted && this.getSurveyBlock(this.props.location.state.participant_info.block_number,this.props.location.state.participant_info.survey_list);
     window.history.pushState(window.state, null, window.location.href);
     window.addEventListener('popstate', e => this._handleGoBack(e));
@@ -150,97 +133,91 @@ class Survey extends React.Component {
   componentWillUnmount()
   {
    this._isMounted = false;
-  } 
+  }
 
   _handleTimeOut() {
     setTimeout(() => {
      this.redirectToQuiz()
     }, 1500);
-} 
+}
 
- // Get info about the specific Survey Block: 
+ // Get info about the specific Survey Block:
  getSurveyBlock(block_number_,survey_list_) {
 
     // console.log('Block Number Get Survey Block:',block_number_+1)
 
     const surveytag_block = survey_list_[block_number_]
     // console.log('SurveyTag Block:',surveytag_block)
- 
+
     this.setState({ loading: true , questions: quizData[survey_list_[block_number_]].default, block_info : {...this.state.block_info, surveytag:surveytag_block}});
 
 }
 
  redirectToEnd(){
-    // redirect either to the TASK or to the validation page depeneding on the task status 
-    if (this.props.location.state.participant_info.task = true) {
-      alert("You will now be redirected to the experimental game. Please, confirm leaving the page. Thank you!")
-      // create a flexible link including prolific id, study id longit and participant ids and redirect to the external 
-      // window.location = 'http://localhost:5000/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id 
-      window.location = 'https://udecmac.osc-fr1.scalingo.io/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id 
-
-    }
-    else {
-
       alert("You will now be redirected to the validation page. Please, confirm leaving the page. Thank you!")
       // window.location.replace('https://app.prolific.co/submissions/complete?cc=1A496EDB')
-      // window.location = 'https://app.prolific.co/submissions/complete?cc=' + this.props.location.state.participant_info.study_id // CHECK if validation code == stidu id 
-  }
+      window.location = 'https://app.prolific.co/submissions/complete?cc=XXXXX' 
+
 }
-  
+
 
 render()
-  { 
+  {
     let text
     if ((this.state.block_info.surveytag === this.props.location.state.participant_info.survey_list[0]) && (this.state.newblock_frame))
-    { 
+    {
       text = <div className='SurveyIntroText'> <p>Dear Participant,</p>
-      <p>Thank you for taking part in our study!</p>
-      <p>The current study investigating ‘decision-making in time of uncertainty’ will take about 60 minutes.</p> 
-      <p>You will be asked to complete several questionnaires and play a decision-making task.</p>
-      <p>Please do not start until you will have enough time to complete it in one go.</p>
-      <p>Please close other programs (e.g. chat or e-mail) to avoid distractions.</p>
+      <p><span className="bold">Thank you for completing the two games!</span></p>
+      <p>This part of the study will take about 15 minutes.</p>
+      <p>You will now be asked to complete several questionnaires.</p>
+      <p>You have already seen some of these surveys in the previous study but some questionnaires are new.</p>
+      
+      </div>
 
-      <p><span className="bold">Good luck!</span></p></div>
-
+          
     return (
       <div>
-      <center> 
+      <center>
       <div className="instructionsButtonContainer">
         <div>
-          {text}           
-        </div> 
+          {text}
+        </div>
         <center>
           <Button className="buttonInstructionStart" onClick={()=>this.redirectToQuiz()}>
           <span className="bold">START</span>
           </Button>
         </center>
       </div>
-      </center> 
+      </center>
       </div>);
-    } 
+    }
 
-     else if ((this.state.block_info.surveytag !== this.props.location.state.participant_info.survey_list[0]) && (this.state.newblock_frame)) 
-    { 
+     else if ((this.state.block_info.surveytag !== this.props.location.state.participant_info.survey_list[0]) && (this.state.newblock_frame))
+      {
         return(<div>{this._handleTimeOut()}</div>);
       }
 
-    else if (this.props.location.state.participant_info.block_number === this.props.location.state.participant_info.TotalBlock && this.state.finished===true) 
+    else if ((this.props.location.state.participant_info.block_number === this.props.location.state.participant_info.TotalBlock) && (this.state.finished===true))
     {
-      if (this.props.location.state.participant_info.task===true) {
-        text = <div className='SurveyIntroText'> <p><span className="bold">You completed all the questionnaires!</span></p>
-              <p>You will now be redirected to the experimental game.</p>
-              <p>Please, confirm leaving the page when prompted by the browser.Thank you!</p></div>      
-      }
       
-      else {
         text = <div className='SurveyIntroText'> <p><span className="bold">You completed all the questionnaires!</span></p>
-            <p>You will now be redirected to the validation page.</p>
-            <p>Please, confirm leaving the page when prompted by the browser. Thank you!</p></div>
-      }
+            
+            <p>For information about the COVID-19 (coronavirus), please visit the following websites:
+            <a style={{display: "table-cell"}} href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank">WHO</a> 
+            </p>
+            <p>
+            <a style={{display: "table-cell"}} href="https://www.gov.uk/coronavirus" target="_blank">GOV.UK</a>
+            </p> 
+           
+            <p>If you have any questions related to this study, please contact a.loosen.17@ucl.ac.uk.</p> 
 
+            <p>You will now be redirected to the validation page.</p>
+            <p>Please, confirm leaving the page when prompted by the browser. Thank you!</p>
+            </div>
+    
       return (
           <div>
-          <center> 
+          <center>
           <div className="restarttraining">
               {text}  <div className="translate"/>
           </div>
@@ -248,9 +225,8 @@ render()
             <Button variant="secondary" color="danger" size="sm" className="buttonInstructionFinal" type="submit" onClick={() => this.redirectToEnd()}>Continue</Button>
           </div>
           </center>
-          </div>);        
+          </div>);
     }
-
     else
     {
           text = 'Thanks a lot for you input so far, please continue with the next section'
@@ -258,7 +234,7 @@ render()
       <div>
       <center>
       <div className="SurveyIntroText">
-        {text}           
+        {text}
       </div>
       <center>
             <Button className="buttonInstructionStart" onClick={()=> this.state.finished ? this.redirectToEnd() : this.redirectToQuiz()}>
@@ -267,7 +243,7 @@ render()
             </center>
     </center>
     </div>);
-    }    
+    }
   }
 
 }

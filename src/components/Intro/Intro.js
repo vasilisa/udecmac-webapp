@@ -9,7 +9,8 @@ import './Intro.css';
 import './bootstrap.min.css';
 
 /*
-Contains the INFORMATION for COVID-19 participants FROM THE ONLINE ETHICS 
+Contains the INFORMATION for COVID-19 participants FROM THE ONLINE ETHICS
+Adapted for T2 of the COVID-19 study. For T1 see T1 branch on github  
 */
 
 // Specify a SURVEY LIST HERE FOR SIMPLICITY 
@@ -18,22 +19,13 @@ Contains the INFORMATION for COVID-19 participants FROM THE ONLINE ETHICS
 
 const survey_list = [
 // this goes on each time point 
-'demo', 
-'pad',
+'pad', 
+'ocir',
 'hads', 
-'pss', 
-'pswq',
-// this are time point 1 specific
-// 'ius', -> moved to the 2nd time point 
-// 'bis', -> moved to the 2nd time point 
-'ybocs',   
-'covidknw',
-'covidbsl',
 'covidprotbeh',
 'covidinfos',
-'covidrisk',
 'covidpersimp',
-'iq' 
+'feedback'
  ] 
  
 const n =  survey_list.length-1;   
@@ -61,12 +53,13 @@ class Intro extends React.Component {
       participant_id: 1, // by default 
       prolific_id: prolific_id,
       study_id: study_id,
-      longit_id: 1, // by default the first presentation of task, might be subject to modifications 
+      longit_id: 2, // by default the first presentation of task, might be subject to modifications 
       block_number : 0, // has to be in the parent for Survey component for proper functioning 
       TotalBlock: n, // has to be in the parent for Survey component for proper functioning 
       date: dateString,
       survey_list: survey_list,
-      task: true   
+      task: true, // if true than it redirects to Tricia's task after consent 
+      survey: false // if true than it redirect to the survey but not Tricia's task after     
   }
 
   // console.log(this.state.TotalBlock)
@@ -114,6 +107,18 @@ render() {
   return (
       <div>
         <div className="IntroConsentText">
+
+          <p><span className="bold">Welcome back to our study!</span></p>
+          <p>This part of the study investigating ‘decision-making in time of uncertainty’ will take about 60 minutes.</p>
+          <p>You will be asked to play two decision-making tasks and complete several questionnaires.</p>
+          <p>As mentioned in our study description, this study can <span className="bold">ONLY BE COMPLETED ON A DESKTOP (computer or laptop).</span></p>
+          <p>Do not start it on a phone or tablet.</p>
+          <p>Our games are not compatible with such devices and we will not be able to accept your submission via phone or tablets.</p>
+          <p>Please, only start when you have enough time to complete the whole study in one go.</p>
+          <p>Please close other programs (e.g. chat or e-mail) to avoid distractions.</p> 
+          <p>Thank you!</p>
+          <br></br>
+
           <p><span className="bold">INFORMATION FOR THE PARTICIPANT</span></p>
           <p><span className="bold">Who is conducting this research study?</span></p>
           <p>This research is being conducted by the Wellcome Centre for Human Neuroimaging and the Max Planck UCL Centre for Computational Psychiatry and Ageing Research.</p>

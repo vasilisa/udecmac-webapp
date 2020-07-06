@@ -1,9 +1,9 @@
 var quizQuestions = [
 
 /*
-  Custom-Based questions for COVID-19 study: PROTECTIVE BEHAVIOR 
+  Custom-Based questions for COVID-19 study: PROTECTIVE BEHAVIOR
   by VS March 2020
-  Time point 1 
+  Time point 1 and TIME POINT 2
 */
 
 
@@ -209,7 +209,7 @@ var quizQuestions = [
       question:"For this question please select ‘always’ to demonstrate your attention.",
 
       answers: [{
-         type: "covid-1",
+        type: "covid-1",
         content: "1 - Never"},
 
         {type: "covid-2",
@@ -238,7 +238,7 @@ var quizQuestions = [
       question:"Do you ever constrain yourself from touching your face?",
 
       answers: [{
-         type: "covid-1",
+        type: "covid-1",
         content: "1 - Never"},
 
         {type: "covid-2",
@@ -262,12 +262,40 @@ var quizQuestions = [
        {max: ""}
       ]
   },
+  {
+        question:"Do you make sure to cough and sneeze into your elbow?",
+
+        answers: [{
+        type: "covid-1",
+        content: "1 - Never"},
+
+        {type: "covid-2",
+        content: "2"},
+
+        {type: "covid-3",
+        content: "3 - Sometimes"},
+
+        {type: "covid-4",
+        content: "4"},
+
+        {type: "covid-5",
+        content: "5 - Always"},
+        ],
+        qtype: 'quiz',
+        questionId: 9,
+        surveytag: 'covidprotbeh',
+        title: '',
+        constraint: [
+         {min: ""},
+         {max: ""}
+        ]
+    },
 
   {
       question:"What is your current isolation status? By ‘self-isolation’ we mean staying at home and avoiding contact to people in- and outside your household. This also means not leaving the house unless it is unavoidable (e.g. no food or medicine delivery possible, medical appointment).",
 
       answers: [{
-         type: "covid-1",
+        type: "covid-1",
         content: "I am living my life as normal"},
 
         {type: "covid-2",
@@ -281,26 +309,6 @@ var quizQuestions = [
 
       ],
       qtype: 'quiz',
-      questionId: 9,
-      surveytag: 'covidprotbeh',
-      title: '',
-      constraint: [
-       {min: ""},
-       {max: ""}
-      ]
-  },
-
-   {
-      question:"When leaving your house, do you stay at least 2 metres (6ft) away from other people?",
-
-      answers: [{
-         type: "covid-1",
-        content: "Agree"},
-
-        {type: "covid-2",
-        content: "Disagree"},
-      ],
-      qtype: 'quiz',
       questionId: 10,
       surveytag: 'covidprotbeh',
       title: '',
@@ -309,7 +317,174 @@ var quizQuestions = [
        {max: ""}
       ]
   },
+   {
+      question:"When leaving your house, do you stay at least 2 metres (6ft) away from other people?",
 
+      answers: [{
+        type: "covid-1",
+        content: "1 - Never"},
+
+        {type: "covid-2",
+        content: "2"},
+
+        {type: "covid-3",
+        content: "3 - Sometimes"},
+
+        {type: "covid-4",
+        content: "4"},
+
+        {type: "covid-5",
+        content: "5 - Always"},
+      ],
+      qtype: 'quiz',
+      questionId: 11,
+      surveytag: 'covidprotbeh',
+      title: '',
+      constraint: [
+       {min: ""},
+       {max: ""}
+      ]
+  },
+  {
+      question:"Do you avoid events and locations where social distancing is not possible?",
+
+      answers: [{
+        type: "covid-1",
+        content: "1 - Never"},
+
+        {type: "covid-2",
+        content: "2"},
+
+        {type: "covid-3",
+        content: "3 - Sometimes"},
+
+       {type: "covid-4",
+        content: "4"},
+
+        {type: "covid-5",
+        content: "5 - Always"},
+        ],
+      qtype: 'quiz',
+      questionId: 12,
+      surveytag: 'covidprotbeh',
+      title: '',
+      constraint: [
+         {min: ""},
+         {max: ""}
+      ]
+  },
+  {
+      question:"Do you wear a face mask when social distancing is not possible (e.g. public transport, supermarkets, restaurants)?",
+
+      answers: [{
+        type: "covid-1",
+        content: "1 - Never"},
+
+        {type: "covid-2",
+        content: "2"},
+
+        {type: "covid-3",
+        content: "3 - Sometimes"},
+
+        {type: "covid-4",
+        content: "4"},
+
+        {type: "covid-5",
+        content: "5 - Always"},
+          ],
+      qtype: 'quiz',
+      questionId: 13,
+      surveytag: 'covidprotbeh',
+      title: '',
+      constraint: [
+      {min: ""},
+      {max: ""}
+      ]
+  },
+  {
+      question:"Do you avoid physical contact (e.g. shaking hands, hugging) with people outside of your household?",
+
+      answers: [{
+        type: "covid-1",
+        content: "1 - Never"},
+
+        {type: "covid-2",
+        content: "2"},
+
+        {type: "covid-3",
+        content: "3 - Sometimes"},
+
+        {type: "covid-4",
+        content: "4"},
+
+        {type: "covid-5",
+        content: "5 - Always"},
+            ],
+      qtype: 'quiz',
+      questionId: 14,
+      surveytag: 'covidprotbeh',
+      title: '',
+      constraint: [
+      {min: ""},
+      {max: ""}
+      ]
+  },
+  {
+      question:"Do you avoid non-essential travel (e.g. vacation, unnecessary work trips)? ",
+
+      answers: [{
+        type: "covid-1",
+        content: "1 - Not at all"},
+
+        {type: "covid-2",
+        content: "2"},
+
+        {type: "covid-3",
+        content: "3 - Partially"},
+
+        {type: "covid-4",
+        content: "4"},
+
+        {type: "covid-5",
+        content: "5 - Very much so"},
+              ],
+      qtype: 'quiz',
+      questionId: 15,
+      surveytag: 'covidprotbeh',
+      title: '',
+      constraint: [
+      {min: ""},
+      {max: ""}
+      ]
+  },
+  {
+      question:"Do you avoid public transportation where possible? ",
+
+      answers: [{
+        type: "covid-1",
+        content: "1 - Not at all"},
+
+        {type: "covid-2",
+        content: "2"},
+
+        {type: "covid-3",
+        content: "3 - Partially"},
+
+        {type: "covid-4",
+        content: "4"},
+
+        {type: "covid-5",
+        content: "5 - Very much so"},
+          ],
+      qtype: 'quiz',
+      questionId: 16,
+      surveytag: 'covidprotbeh',
+      title: '',
+      constraint: [
+      {min: ""},
+      {max: ""}
+      ]
+  },
   {
       question:"Overall, do you follow the recommendations from authorities to prevent spread of COVID-19 (coronavirus)?",
 
@@ -330,7 +505,7 @@ var quizQuestions = [
         content: "5 - Very much so"},
       ],
       qtype: 'quiz',
-      questionId: 11,
+      questionId: 17,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [

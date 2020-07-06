@@ -3,7 +3,9 @@ var quizQuestions = [
 /*
   Custom-Based questions for COVID-19 study: PERSONAL IMPACT
   by VS March 2020
-  AT TIME POINT 1 
+  AT TIME POINT 1
+  adapted by AL June 2020
+  AT TIME POINT 2
 */
 
 
@@ -155,76 +157,6 @@ var quizQuestions = [
        {max: ""}
       ]
   },
-
-{
-      question:"Do you have caring responsibilities for any of the following? (tick any that apply)",
-
-      answers: [{
-         type: "covid-1",
-        content: "Elderly relatives or friends"},
-
-        {type: "covid-2",
-        content: "People with long-term conditions or disabilities"},
-
-        {type: "covid-3",
-        content: "Children or grandchildren"},
-
-        {type: "covid-4",
-        content: "None of the above"},
-
-      ],
-      qtype: 'checkbox',
-      questionId: 6,
-      surveytag: 'covidpersimp',
-      title: '',
-      constraint: [
-       {min: ""},
-       {max: ""}
-      ]
-  },
-
-
-{
-      question:"Do you identify as a member of a ‘high risk group’? High risk group: aged 70 or older, people younger than 70 with weakened immune systems and people who have underlying chronic conditions, including heart disease, diabetes, or asthma.",
-
-      answers: [{
-         type: "covid-1",
-        content: "No"},
-
-        {type: "covid-2",
-        content: "Yes"},
-      ],
-      qtype: 'quiz',
-      questionId: 7,
-      surveytag: 'covidpersimp',
-      title: '',
-      constraint: [
-       {min: ""},
-       {max: ""}
-      ]
-  },
-
-  {
-      question:"Does someone in your close circle (e.g. family, partner, close friend) or your household identify as a member of a ‘high risk group’?",
-
-      answers: [{
-         type: "covid-1",
-        content: "No"},
-
-        {type: "covid-2",
-        content: "Yes"},
-      ],
-      qtype: 'quiz',
-      questionId: 8,
-      surveytag: 'covidpersimp',
-      title: '',
-      constraint: [
-       {min: ""},
-       {max: ""}
-      ]
-  },
-
-
   {
       question:"Are you currently volunteering or fulfilling any of the government’s identified ‘key worker’ roles? (tick any that apply)",
 
@@ -263,8 +195,8 @@ var quizQuestions = [
         content: "None of the above"},
 
       ],
-      qtype: 'checkbox',
-      questionId: 9,
+      qtype: 'checkbox', 
+      questionId: 6,
       surveytag: 'covidpersimp',
       title: '',
       constraint: [
@@ -273,34 +205,6 @@ var quizQuestions = [
       ]
   },
 
-
-  {
-        question:"When do you think life will be back to normal?",
-
-        answers: [{
-           type: "covid-1",
-          content: "Within days"},
-
-          {type: "covid-2",
-          content: "Within weeks"},
-
-          {type: "covid-3",
-          content: "Within months"},
-
-          {type: "covid-4",
-          content: "Not sure"},
-
-        ],
-        qtype: 'checkbox',
-        questionId: 10,
-        surveytag: 'covidpersimp',
-        title: '',
-        constraint: [
-         {min: ""},
-         {max: ""}
-        ]
-    },
-
 ]
 
-export default quizQuestions; 
+export default quizQuestions;

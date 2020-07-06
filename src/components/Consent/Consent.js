@@ -55,6 +55,8 @@ class Consent extends Component {
     super(props);
 
     const participant_info = this.props.location.state.participant_info
+
+    console.log(participant_info)
   //   var options = {}
  
   // for (var key in consents) {
@@ -75,7 +77,9 @@ class Consent extends Component {
   this.handleSubmit        = this.handleSubmit.bind(this);  
   this.createCheckBox      = this.createCheckBox.bind(this);
   this.createCheckBoxes    = this.createCheckBoxes.bind(this)
-  this.redirectToInfo      = this.redirectToInfo.bind(this); 
+  this.redirectToInfo      = this.redirectToInfo.bind(this);
+  this.handleDebugSurvey   = this.handleDebugSurvey.bind(this); 
+   
   // this.selectAllCheckboxes = this.selectAllCheckboxes.bind(this)
   // this.selectAll           = this.selectAll.bind(this)
   
@@ -132,6 +136,14 @@ redirectToInfo() {
 //   this.selectAllCheckboxes(true);
 // } 
 
+handleDebugSurvey(){
+// This is for debug purposes only 
+  this.props.history.push({
+      pathname: `/Survey`, 
+      state: {participant_info: this.props.location.state.participant_info, newblock_frame: true} // to be changed
+  })
+
+}
 
 handleSubmit(event) {
         
@@ -155,16 +167,29 @@ handleSubmit(event) {
         }
 
         else if (count===box_total) {
-          
-        // redirect to survey here - maybe with the timeout 
 
-          this.props.history.push({
-            pathname: `/Survey`, 
-            state: {participant_info: this.props.location.state.participant_info, newblock_frame: true} // to be changed
+          // redirect to the task or to the survey 
+          if (this.state.participant_info.task === true) {
+
+            alert("You will now be redirected to the first experimental game. Please, confirm leaving the page. Thank you!")
+            // create a flexible link including prolific id, study id longit and participant ids and redirect to the external
+            window.location = 'https://udecmac.osc-fr1.scalingo.io/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id
+            // window.location = 'http://localhost:5000/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id
+          }
+          
+        else if (this.state.participant_info.survey === true)
+          {
+            // redirect to survey here 
+
+            this.props.history.push({
+              pathname: `/Survey`, 
+              state: {participant_info: this.props.location.state.participant_info, newblock_frame: true} // to be changed
           })
+          }
+
         }
         else {
-
+          return null
         }
       }
 
@@ -220,6 +245,13 @@ createCheckBoxes(){
             SUBMIT
           </button>
         </div>
+        <br></br>
+        <div>
+          <button type="button" className="btn btn-save btn-primary pad-20" onClick={this.handleDebugSurvey}>
+            DEBUG SURVEY
+          </button>
+        </div>
+        
         <p></p>
           </div>
       </center>

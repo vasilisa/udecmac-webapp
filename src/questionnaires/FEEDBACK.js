@@ -6,7 +6,7 @@ var quizQuestions = [
 */
 
 { 
-    question: "ADD ANY OPEN ENDED QUESTIONS HERE : How was your experience in this experiment? Did you have any troubles with completing the questionnaires?", 
+    question: "Thank you for participating in our research. If you have comments or suggestions relating to this study, please feel free to include them below.",
 
     answers: [
         { 

@@ -3,7 +3,7 @@ var quizQuestions = [
 /*
   Custom-Based questions for COVID-19 study - INFOS
   by VS March 2020
-  TIME POINT 1
+  TIME POINT 1 and TIME POINT 2
 */
 
 
