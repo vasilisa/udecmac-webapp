@@ -50,12 +50,16 @@ class Survey extends React.Component {
       surveytag  : this.props.location.state.participant_info.survey_list[0], // First questionnaire in the list
      }
 
+    var currentDate   = new Date().toLocaleString(); // maybe change to local 
+    
     this.state = {
       participant_info : this.props.location.state.participant_info,
       block_info       : block_info,
       newblock_frame   : this.props.location.state.newblock_frame,
       questions        : quizData[this.props.location.state.participant_info.survey_list[0]].default,
       finished         : false,
+      beginexp         : currentDate, 
+
     }
 
 
@@ -80,6 +84,7 @@ class Survey extends React.Component {
            state: {participant_info: this.state.participant_info,
                    block_info      : this.state.block_info,
                    questions       : this.state.questions,
+                   beginexp        : this.state.beginexp
                  }
           })}
           else // FALSE

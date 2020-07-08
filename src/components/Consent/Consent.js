@@ -79,6 +79,8 @@ class Consent extends Component {
   this.createCheckBoxes    = this.createCheckBoxes.bind(this)
   this.redirectToInfo      = this.redirectToInfo.bind(this);
   this.handleDebugSurvey   = this.handleDebugSurvey.bind(this); 
+  this.handleDebugIgt      = this.handleDebugIgt.bind(this); 
+  
    
   // this.selectAllCheckboxes = this.selectAllCheckboxes.bind(this)
   // this.selectAll           = this.selectAll.bind(this)
@@ -145,6 +147,16 @@ handleDebugSurvey(){
 
 }
 
+handleDebugIgt(){
+// This is for debug purposes only 
+  this.props.history.push({
+      pathname: `/InstructionsIgt`, 
+      state: {participant_info: this.props.location.state.participant_info, newblock_frame: true} // to be changed
+  })
+
+}
+
+
 handleSubmit(event) {
         
         // console.log(event)
@@ -173,8 +185,8 @@ handleSubmit(event) {
 
             alert("You will now be redirected to the first experimental game. Please, confirm leaving the page. Thank you!")
             // create a flexible link including prolific id, study id longit and participant ids and redirect to the external
-            window.location = 'https://udecmac.osc-fr1.scalingo.io/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id
-            // window.location = 'http://localhost:5000/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id
+            // window.location = 'https://udecmac.osc-fr1.scalingo.io/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id
+            window.location = 'http://localhost:5000/exp?prolific_id='+this.props.location.state.participant_info.prolific_id + '&participant_id=' + this.props.location.state.participant_info.participant_id + '&study_id=' + this.props.location.state.participant_info.study_id + '&longit_id=' + this.props.location.state.participant_info.longit_id
           }
           
         else if (this.state.participant_info.survey === true)
@@ -251,6 +263,14 @@ createCheckBoxes(){
             DEBUG SURVEY
           </button>
         </div>
+
+        <br></br>
+        <div>
+          <button type="button" className="btn btn-save btn-primary pad-20" onClick={this.handleDebugIgt}>
+            DEBUG IGT
+          </button>
+        </div>
+        
         
         <p></p>
           </div>

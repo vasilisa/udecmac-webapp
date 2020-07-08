@@ -40,23 +40,18 @@ class Intro extends React.Component {
 
     // console.log(params) 
     const prolific_id = (params['PROLIFIC_PID']=== undefined ? 'undefined' : params['PROLIFIC_PID']) 
-    const study_id    = (params['STUDY_ID']=== undefined ? 'undefined' : params['STUDY_ID']) 
+    // const study_id    = (params['STUDY_ID']=== undefined ? 'COVID-T2' : params['STUDY_ID']) 
 
-    var currentDate   = new Date(); // maybe change to local 
-    var date          = currentDate.getDate();
-    var month         = currentDate.getMonth(); //Be careful! January is 0 not 1
-    var year          = currentDate.getFullYear();
-    var dateString    = date + "-" +(month + 1) + "-" + year;
+    var currentDate   = new Date().toLocaleString(); // maybe change to local 
     
-  
-   this.state = {
+    this.state = {
       participant_id: 1, // by default 
       prolific_id: prolific_id,
-      study_id: study_id,
-      longit_id: 2, // by default the first presentation of task, might be subject to modifications 
-      block_number : 0, // has to be in the parent for Survey component for proper functioning 
+      study_id: 'COVID-T2',
+      longit_id: 2, 
+      block_number: 0, // has to be in the parent for Survey component for proper functioning 
       TotalBlock: n, // has to be in the parent for Survey component for proper functioning 
-      date: dateString,
+      date_time: currentDate,
       survey_list: survey_list,
       task: true, // if true than it redirects to Tricia's task after consent 
       survey: false // if true than it redirect to the survey but not Tricia's task after     
@@ -136,7 +131,7 @@ render() {
           <p>You will also be asked some questions about yourself, your feelings, background, attitudes and behaviour in your everyday life.</p>
           <p>There will also be some questions about reasoning.</p>
           <p>For this experiment we are interested in multiple different processes in learning and decision-making.</p>
-          <p>After you complete this session, we will invite you to participate in further sessions. You will be compensated after completion of each session with <span className="bold">£8.25/h</span> and if you participate in the whole experiment you will receive a total of <span className="bold">approximately £20</span>.</p>
+          <p>After you complete this session, we will invite you to participate in further sessions. You will be compensated after completion of each session with <span className="bold">£8.25/h</span> and if you participate in the whole experiment you will receive a total of <span className="bold">£20.62</span>.</p>
           <p>Remember, you are free to withdraw at any time without giving a reason.</p> 
           
           <p><span className="bold">What are the possible disadvantages and risks of taking part?</span></p>
@@ -157,8 +152,9 @@ render() {
           <p><span className="bold">What about my data?</span></p>
           <p>This ‘local’ privacy notice sets out the information that applies to this particular study.</p>
           <p>Further information on how UCL uses participant information can be found in our ‘general’ privacy notice:</p>
-          <p>For participants in research studies, click <a style={{display: "table-cell"}} href="https://www.ucl.ac.uk/legal-services/privacy/ucl-general-research-participant-privacy-notice" target="_blank">here</a></p> 
-          
+          <p>For participants in research studies, click 
+          <a href="https://www.ucl.ac.uk/legal-services/privacy/ucl-general-research-participant-privacy-notice"
+           title="here">the Mozilla homepage</a>.</p>
           <p> The information that is required to be provided to participants under data protection legislation (GDPR and DPA 2018) is provided across both the ‘local’ and ‘general’ privacy notices.</p>
           <p>To help future research and make the best use of the research data you have given us (such as answers to questionnaires) we may keep your research data indefinitely and share these.</p>
           <ul>

@@ -8,7 +8,11 @@ import Intro from "./components/Intro/Intro";
 import Consent from "./components/Consent/Consent";
 import Survey from "./components/Survey/Survey";
 import QuizBlock from "./components/QuizBlock/QuizBlock";
-import Igtask from "./components/Igtask/Igtask";
+import InstructionsIgt from "./components/Igtask/InstructionsIgt";
+import IgtBlock from "./components/Igtask/IgtBlock";
+import IgtBoard from "./components/Igtask/IgtBoard";
+
+
 
 
 import * as serviceWorker from './serviceWorker';
@@ -40,8 +44,11 @@ const App = () => {
                 <Route path="/Consent" component={Consent} exact />
                 <Route path="/Survey" component={Survey} exact />
                 <Route path="/QuizBlock" component={QuizBlock} exact />
-                <Route path="/Igtask" component={Igtask} exact />
+                <Route path="/InstructionsIgt" component={InstructionsIgt} exact />
+                <Route path="/IgtBlock" component={IgtBlock} exact />
+                <Route path="/IgtBoard" component={IgtBoard} exact />
                 
+
             
             </Switch>
         </BrowserRouter>

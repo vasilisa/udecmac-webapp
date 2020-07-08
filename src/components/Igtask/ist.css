@@ -1,0 +1,65 @@
+.score {
+  margin-top:15px;
+  font-size:24px;
+  font-weight: bold;
+}
+
+.board {
+  margin-left:450px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.field {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 68px;
+  height: 68px;
+  margin-right: -1px;
+  margin-left:-1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 68px;
+}
+
+.field:focus {
+  outline: none;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+
+}
+
+.response-row {
+margin-top: 68px;
+margin-left: 290px;
+
+}
+
+.gap {
+  font-size: 34px;
+  font-weight: bold;
+  padding: 0;
+  margin-right:280px;
+  margin-top:-60px;
+   
+}
+
+table, th, td {
+  border: 0px;
+  width: 340px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
