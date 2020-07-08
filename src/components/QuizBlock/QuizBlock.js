@@ -41,8 +41,7 @@ class QuizBlock extends React.Component {
 
    this.handleAnswerSelected  = this.handleAnswerSelected.bind(this);
    this.redirectToSurvey      = this.redirectToSurvey.bind(this);
-   this.hydrateStateWithLocalStorage = this.hydrateStateWithLocalStorage.bind(this); 
-
+   
   }
 
   componentDidMount() {
@@ -65,24 +64,9 @@ class QuizBlock extends React.Component {
       
     });
 
-    this.hydrateStateWithLocalStorage();
   }
 
-  hydrateStateWithLocalStorage() {
-
-       // if the key exists in localStorage
-       if (sessionStorage.hasOwnProperty('cashed')) {
-         let cashed_ = sessionStorage.getItem('cashed');
-         try {
-           cashed_ = JSON.parse(cashed_);
-           this.setState({'cashed': cashed_ });
-         } catch (e) {
-           // handle empty string
-           this.setState({'cashed': cashed_ });
-         }
-       }
-       // console.log('retreived cash', this.state.cashed)
-     }
+  
 
 
   shuffleArray(array) {
@@ -199,45 +183,7 @@ NoShuffleArray(array) {
      })
 
 
-    // for each key in cashed object append the values
-    var cashed_update = this.state.cashed
-    if (Object.keys(cashed_update).length === 0 && cashed_update.constructor === Object || cashed_update === '' || cashed_update ===undefined) {
-      
-    const keys = ['block_number','block_name', 
-                    'question_ids',
-                    'answers',
-                    'beginexp',
-                    'endexp']
-
-      for (const key of keys) {
-        cashed_update[key] = [body[key]] // wrap into an array here 
-      }
-    }
-    else {
-    try {
-      const keys = Object.keys(cashed_update)
-      
-      for (const key of keys) {
-        
-        let val  = cashed_update[key]
-        let val2 = body[key]
-
-        val.push(val2)
-        cashed_update[key] = val
-      }
-
-    } catch (e) {
-      console.log('Failed to append')
-      cashed_update = this.state.cashed
-    }
-
-    } 
-
-    // Push new data to local storage 
-    //console.log('Quiz Saving cash')
-    // console.log(cashed_update)
-    sessionStorage.setItem("cashed", JSON.stringify(cashed_update));
-
+  
   this.props.history.push({
       pathname: `/Survey`,
       state: {participant_info:this.state.participant_info,newblock_frame: false, finished: true}

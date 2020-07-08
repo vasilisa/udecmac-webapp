@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import {withRouter} from 'react-router-dom';
-import { API_URL } from '../../config';
 
 // import other questionnaires the same way
 import * as ocir from '../../questionnaires/OCIR'; 
@@ -173,28 +172,6 @@ class Survey extends React.Component {
           console.log('Cannot parse cashed')
         }
     }
-
-    // Push cashed data to the DB
-    var date_time_end = new Date().toLocaleString();
-
-    let body_cashed = {
-      'log'          : cashed_,  // this.state.cashed, 
-      'date_time'    : this.state.participant_info.date_time, 
-      'date_time_end': date_time_end, 
-      'log_type'     : 'survey' 
-    }
-    
-    fetch(`${API_URL}/attempts/save/`+ this.state.participant_info.participant_id + `/` + this.state.participant_info.study_id + `/` + this.state.participant_info.prolific_id, {
-       method: 'POST',
-       headers: {
-         'Accept': 'application/json',
-         'Content-Type': 'application/json',
-       },
-       body: JSON.stringify(body_cashed)
-    })
-
-    // console.log('Clearing cash') 
-    sessionStorage.removeItem('cashed')
 
     alert("You will now be redirected to the validation page. Please, confirm leaving the page. Thank you!")
     // window.location.replace('https://app.prolific.co/submissions/complete?cc=1A496EDB')
