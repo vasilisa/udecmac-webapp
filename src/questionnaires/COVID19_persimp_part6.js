@@ -24,7 +24,7 @@ var quizQuestions = [
         content: "Not formally diagnosed but suspected and recovered"},
 
         {type: "covid-4",
-        content: "Not formally diagnosed bust suspected and still ill"},
+        content: "Not formally diagnosed but suspected and still ill"},
 
         {type: "covid-5",
         content: "No"},
@@ -54,7 +54,7 @@ var quizQuestions = [
         content: "Not formally diagnosed but suspected and recovered"},
 
         {type: "covid-4",
-        content: "Not formally diagnosed bust suspected and still ill"},
+        content: "Not formally diagnosed but suspected and still ill"},
 
         {type: "covid-5",
         content: "No"},
