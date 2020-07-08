@@ -153,17 +153,20 @@ NoShuffleArray(array) {
     else if (this.state.participant_info.block_number === this.state.participant_info.TotalBlock) {
       var completed = 'yes'
     }
-
+    var current_date = new Date().toLocaleString();
+      
     let body     = {        'participant_id'  : this.state.participant_info.participant_id, 
                             'prolific_id'     : this.state.participant_info.prolific_id, 
                             'longit_id'       : this.state.participant_info.longit_id, 
                             'study_id'        : this.state.participant_info.study_id,
-                             'date'           : this.state.participant_info.date,
+                            'date_time'       : this.state.participant_info.date_time,
                             'block_number'    : this.state.participant_info.block_number+1, 
                             'block_name'      : this.props.location.state.block_info.surveytag, 
                             'question_ids'    : this.state.answered_questionsId, 
                             'answers'         : this.state.answered_questionsContent,
-                            'survey_completed': completed
+                            'survey_completed': completed, 
+                            'beginexp': this.props.location.state.beginexp,
+                            'endexp': current_date
                           }
 
   // console.log(body)
