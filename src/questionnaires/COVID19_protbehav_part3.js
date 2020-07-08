@@ -263,7 +263,7 @@ var quizQuestions = [
       ]
   },
   {
-        question:"Do you make sure to cough and sneeze into your elbow?",
+        question:"Do you make sure to cover your mouth and nose with a tissue or your sleeve (not your hands) when you cough or sneeze?",
 
         answers: [{
         type: "covid-1",
@@ -291,34 +291,8 @@ var quizQuestions = [
         ]
     },
 
-  {
-      question:"What is your current isolation status?",
-
-      answers: [{
-        type: "covid-1",
-        content: "I am living my life as normal"},
-
-        {type: "covid-2",
-        content: "I only go out for essential activities (e.g. getting groceries or medicine, for one exercise a day)"},
-
-        {type: "covid-3",
-        content: "I never leave the house"},
-
-        {type: "covid-4",
-        content: "I am self-isolating from other people in my household (I am never in the same room with them)"},
-
-      ],
-      qtype: 'quiz',
-      questionId: 10,
-      surveytag: 'covidprotbeh',
-      title: '',
-      constraint: [
-       {min: ""},
-       {max: ""}
-      ]
-  },
    {
-      question:"When leaving your house, do you stay at least 2 metres (6ft) away from other people?",
+      question:"Do you make sure to stay at least 2 metres (6ft) away from people that are not members of your household?",
 
       answers: [{
         type: "covid-1",
@@ -337,7 +311,7 @@ var quizQuestions = [
         content: "5 - Always"},
       ],
       qtype: 'quiz',
-      questionId: 11,
+      questionId: 10,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
@@ -345,6 +319,63 @@ var quizQuestions = [
        {max: ""}
       ]
   },
+  {
+      question:"Do you ever meet up with more than one other household at the same time in indoor spaces?",
+
+      answers: [{
+        type: "covid-1",
+        content: "1 - Never"},
+
+        {type: "covid-2",
+        content: "2"},
+
+        {type: "covid-3",
+        content: "3 - Sometimes"},
+
+        {type: "covid-4",
+        content: "4"},
+
+        {type: "covid-5",
+        content: "5 - A lot"},
+          ],
+      qtype: 'quiz',
+      questionId: 11,
+      surveytag: 'covidprotbeh',
+      title: '',
+      constraint: [
+      {min: ""},
+      {max: ""}
+      ]
+  },
+  {
+      question:"Do you ever meet up with people from more than six different households at the same time?",
+
+      answers: [{
+        type: "covid-1",
+        content: "1 - Never"},
+
+        {type: "covid-2",
+        content: "2"},
+
+        {type: "covid-3",
+        content: "3 - Sometimes"},
+
+        {type: "covid-4",
+        content: "4"},
+
+        {type: "covid-5",
+        content: "5 - A lot"},
+          ],
+      qtype: 'quiz',
+      questionId: 12,
+      surveytag: 'covidprotbeh',
+      title: '',
+      constraint: [
+      {min: ""},
+      {max: ""}
+      ]
+  },
+
   {
       question:"Do you avoid events and locations where social distancing is not possible?",
 
@@ -365,7 +396,7 @@ var quizQuestions = [
         content: "5 - Always"},
         ],
       qtype: 'quiz',
-      questionId: 12,
+      questionId: 13,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
@@ -374,7 +405,7 @@ var quizQuestions = [
       ]
   },
   {
-      question:"Do you wear a face mask when social distancing is not possible (e.g. public transport, supermarkets, restaurants)?",
+      question:"Do you wear a face mask covering your mouth and nose when social distancing is not possible (e.g. public transport, supermarkets, restaurants)?",
 
       answers: [{
         type: "covid-1",
@@ -393,7 +424,7 @@ var quizQuestions = [
         content: "5 - Always"},
           ],
       qtype: 'quiz',
-      questionId: 13,
+      questionId: 14,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
@@ -421,7 +452,7 @@ var quizQuestions = [
         content: "5 - Always"},
             ],
       qtype: 'quiz',
-      questionId: 14,
+      questionId: 15,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
@@ -430,7 +461,7 @@ var quizQuestions = [
       ]
   },
   {
-      question:"Do you avoid non-essential travel (e.g. vacation, unnecessary work trips)? ",
+      question:"Do you try to limit the number of people you see? ",
 
       answers: [{
         type: "covid-1",
@@ -449,7 +480,7 @@ var quizQuestions = [
         content: "5 - Very much so"},
               ],
       qtype: 'quiz',
-      questionId: 15,
+      questionId: 16,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
@@ -477,12 +508,38 @@ var quizQuestions = [
         content: "5 - Very much so"},
           ],
       qtype: 'quiz',
-      questionId: 16,
+      questionId: 17,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
       {min: ""},
       {max: ""}
+      ]
+  },
+  {
+      question:"What is your current isolation status?",
+
+      answers: [{
+        type: "covid-1",
+        content: "I am living my life as normal"},
+
+        {type: "covid-2",
+        content: "I only go out for essential activities (e.g. getting groceries or medicine, for one exercise a day)"},
+
+        {type: "covid-3",
+        content: "I never leave the house"},
+
+        {type: "covid-4",
+        content: "I am self-isolating from other people in my household (I am never in the same room with them)"},
+
+      ],
+      qtype: 'quiz',
+      questionId: 18,
+      surveytag: 'covidprotbeh',
+      title: '',
+      constraint: [
+       {min: ""},
+       {max: ""}
       ]
   },
   {
@@ -505,7 +562,7 @@ var quizQuestions = [
         content: "5 - Very much so"},
       ],
       qtype: 'quiz',
-      questionId: 17,
+      questionId: 19,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
