@@ -104,7 +104,7 @@ render() {
         <div className="IntroConsentText">
 
           <p><span className="bold">Welcome back to our study!</span></p>
-          <p>This part of the study investigating ‘decision-making in time of uncertainty’ will take about 60 minutes.</p>
+          <p>This part of the study investigating ‘decision-making in time of uncertainty’ will take about 50 minutes.</p>
           <p>You will be asked to play two decision-making tasks and complete several questionnaires.</p>
           <p>As mentioned in our study description, this study can <span className="bold">ONLY BE COMPLETED ON A DESKTOP (computer or laptop).</span></p>
           <p>Do not start it on a phone or tablet.</p>
@@ -124,7 +124,7 @@ render() {
           <p><span className="bold">Who can take part in this study?</span></p>
           <p>Adults (aged 18 years or over).</p>
           <p><span className="bold">What will happen to me if I take part?</span></p> 
-          <p>You will play one or more online computer games, which will last around approximately 20 minutes.</p> 
+          <p>You will play one or more online computer games, which will last around approximately 30 minutes in total.</p> 
           <p>You will receive between <span className="bold">£8.25</span> and <span className="bold">£9.25</span> for helping us.</p>
           
           <p>The amount could vary based on the decisions you make in the game.</p> 
