@@ -175,7 +175,7 @@ class Survey extends React.Component {
 
     alert("You will now be redirected to the validation page. Please, confirm leaving the page. Thank you!")
     // window.location.replace('https://app.prolific.co/submissions/complete?cc=1A496EDB')
-    window.location = 'https://app.prolific.co/submissions/complete?cc=XXXXX' 
+    window.location = 'https://app.prolific.co/submissions/complete?cc=67D0ACA0' 
 
 }
 
