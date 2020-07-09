@@ -291,7 +291,7 @@ var quizQuestions = [
         ]
     },
     {
-  question: "Please note: When we are referring to 'household' in any of the upcomoing questions this also includes 'support bubbles'. Support bubbles are unions of two households that can be formed if one household consists of only one adult.",
+  question: "Please note: When we are referring to 'household' in any of the upcoming questions this also includes 'support bubbles'. Support bubbles are unions of two households that can be formed if one household consists of only one adult.",
 
   answers: [
           {
@@ -398,21 +398,21 @@ var quizQuestions = [
       question:"Do you avoid events and locations where social distancing is not possible?",
 
       answers: [{
-        type: "covid-1",
-        content: "1 - Never"},
+         type: "covid-1",
+        content: "1 - Not at all"},
 
         {type: "covid-2",
         content: "2"},
 
         {type: "covid-3",
-        content: "3 - Sometimes"},
+        content: "3 - Partially"},
 
-       {type: "covid-4",
+        {type: "covid-4",
         content: "4"},
 
         {type: "covid-5",
-        content: "5 - Always"},
-        ],
+        content: "5 - Very much so"},
+      ],
       qtype: 'quiz',
       questionId: 14,
       surveytag: 'covidprotbeh',
@@ -454,21 +454,21 @@ var quizQuestions = [
       question:"Do you avoid physical contact (e.g. shaking hands, hugging) with people outside of your household?",
 
       answers: [{
-        type: "covid-1",
-        content: "1 - Never"},
+         type: "covid-1",
+        content: "1 - Not at all"},
 
         {type: "covid-2",
         content: "2"},
 
         {type: "covid-3",
-        content: "3 - Sometimes"},
+        content: "3 - Partially"},
 
         {type: "covid-4",
         content: "4"},
 
         {type: "covid-5",
-        content: "5 - Always"},
-            ],
+        content: "5 - Very much so"},
+      ],
       qtype: 'quiz',
       questionId: 16,
       surveytag: 'covidprotbeh',
@@ -479,7 +479,7 @@ var quizQuestions = [
       ]
   },
   {
-      question:"Do you try to limit the number of people you see? ",
+      question:"Do you try to limit the number of people you see outside of your household? ",
 
       answers: [{
         type: "covid-1",
@@ -536,7 +536,7 @@ var quizQuestions = [
       ]
   },
       {
-      question:"When asked by a venue or business you visit, do you leave your real name and contact details to the COVID-19 Test and Trace service?",
+      question:"When asked by a venue or business you visit, do you leave your real name and contact details to support the COVID-19 Test and Trace service?",
 
       answers: [{
         type: "covid-1",
@@ -564,22 +564,23 @@ var quizQuestions = [
       ]
   },
   {
-      question:"What is your current isolation status?",
-
+      question:"Do you make sure to stay at home as much as possible?",
       answers: [{
         type: "covid-1",
-        content: "I am living my life as normal"},
+        content: "1 - Not at all"},
 
         {type: "covid-2",
-        content: "I only go out for essential activities (e.g. getting groceries or medicine, for one exercise a day)"},
+        content: "2"},
 
         {type: "covid-3",
-        content: "I never leave the house"},
+        content: "3 - Partially"},
 
         {type: "covid-4",
-        content: "I am self-isolating from other people in my household (I am never in the same room with them)"},
+        content: "4"},
 
-      ],
+        {type: "covid-5",
+        content: "5 - Very much so"},
+          ],
       qtype: 'quiz',
       questionId: 20,
       surveytag: 'covidprotbeh',
