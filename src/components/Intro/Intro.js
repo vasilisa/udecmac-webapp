@@ -154,7 +154,7 @@ render() {
           <p>Further information on how UCL uses participant information can be found in our ‘general’ privacy notice:</p>
           <p>For participants in research studies, click 
           <a href="https://www.ucl.ac.uk/legal-services/privacy/ucl-general-research-participant-privacy-notice"
-           title="here">the Mozilla homepage</a>.</p>
+           title="here">here</a>.</p>
           <p> The information that is required to be provided to participants under data protection legislation (GDPR and DPA 2018) is provided across both the ‘local’ and ‘general’ privacy notices.</p>
           <p>To help future research and make the best use of the research data you have given us (such as answers to questionnaires) we may keep your research data indefinitely and share these.</p>
           <ul>
