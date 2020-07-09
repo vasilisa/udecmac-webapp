@@ -290,6 +290,24 @@ var quizQuestions = [
          {max: ""}
         ]
     },
+    {
+  question: "Please note: When we are referring to 'household' in any of the upcomoing questions this also includes 'support bubbles'. Support bubbles are unions of two households that can be formed if one household consists of only one adult.",
+
+  answers: [
+          {
+              type: "Continue",
+              content: "Continue"
+          }
+          ],
+      qtype: "button", // to be maybe changed
+      questionId: 10,
+      surveytag: 'covidprotbeh',
+      title: '', // to be changed
+      constraint: [
+        {min: ""},
+        {max: ""}
+      ]
+  },
 
    {
       question:"Do you make sure to stay at least 2 metres (6ft) away from people that are not members of your household?",
@@ -311,7 +329,7 @@ var quizQuestions = [
         content: "5 - Always"},
       ],
       qtype: 'quiz',
-      questionId: 10,
+      questionId: 11,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
@@ -339,7 +357,7 @@ var quizQuestions = [
         content: "5 - A lot"},
           ],
       qtype: 'quiz',
-      questionId: 11,
+      questionId: 12,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
@@ -367,7 +385,7 @@ var quizQuestions = [
         content: "5 - A lot"},
           ],
       qtype: 'quiz',
-      questionId: 12,
+      questionId: 13,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
@@ -396,7 +414,7 @@ var quizQuestions = [
         content: "5 - Always"},
         ],
       qtype: 'quiz',
-      questionId: 13,
+      questionId: 14,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
@@ -424,7 +442,7 @@ var quizQuestions = [
         content: "5 - Always"},
           ],
       qtype: 'quiz',
-      questionId: 14,
+      questionId: 15,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
@@ -452,7 +470,7 @@ var quizQuestions = [
         content: "5 - Always"},
             ],
       qtype: 'quiz',
-      questionId: 15,
+      questionId: 16,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
@@ -480,7 +498,7 @@ var quizQuestions = [
         content: "5 - Very much so"},
               ],
       qtype: 'quiz',
-      questionId: 16,
+      questionId: 17,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
@@ -488,7 +506,8 @@ var quizQuestions = [
       {max: ""}
       ]
   },
-  {
+
+      {
       question:"Do you avoid public transportation where possible? ",
 
       answers: [{
@@ -508,7 +527,35 @@ var quizQuestions = [
         content: "5 - Very much so"},
           ],
       qtype: 'quiz',
-      questionId: 17,
+      questionId: 18,
+      surveytag: 'covidprotbeh',
+      title: '',
+      constraint: [
+      {min: ""},
+      {max: ""}
+      ]
+  },
+      {
+      question:"When asked by a venue or business you visit, do you leave your real name and contact details to the COVID-19 Test and Trace service?",
+
+      answers: [{
+        type: "covid-1",
+        content: "1 - Never"},
+
+        {type: "covid-2",
+        content: "2"},
+
+        {type: "covid-3",
+        content: "3 - Sometimes"},
+
+        {type: "covid-4",
+        content: "4"},
+
+        {type: "covid-5",
+        content: "5 - Always"},
+          ],
+      qtype: 'quiz',
+      questionId: 19,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
@@ -534,7 +581,7 @@ var quizQuestions = [
 
       ],
       qtype: 'quiz',
-      questionId: 18,
+      questionId: 20,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
@@ -562,7 +609,7 @@ var quizQuestions = [
         content: "5 - Very much so"},
       ],
       qtype: 'quiz',
-      questionId: 19,
+      questionId: 21,
       surveytag: 'covidprotbeh',
       title: '',
       constraint: [
