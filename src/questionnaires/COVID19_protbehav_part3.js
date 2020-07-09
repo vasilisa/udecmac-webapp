@@ -208,7 +208,7 @@ var quizQuestions = [
   {
       question:"For this question please select ‘always’ to demonstrate your attention.",
 
-      answers: [{
+        answers: [{
         type: "covid-1",
         content: "1 - Never"},
 
@@ -223,7 +223,7 @@ var quizQuestions = [
 
         {type: "covid-5",
         content: "5 - Always"},
-      ],
+        ],
       qtype: 'quiz',
       questionId: 7,
       surveytag: 'covidprotbeh',
@@ -354,7 +354,7 @@ var quizQuestions = [
         content: "4"},
 
         {type: "covid-5",
-        content: "5 - A lot"},
+        content: "5 - Very often"},
           ],
       qtype: 'quiz',
       questionId: 12,
@@ -382,7 +382,7 @@ var quizQuestions = [
         content: "4"},
 
         {type: "covid-5",
-        content: "5 - A lot"},
+        content: "5 - Very often"},
           ],
       qtype: 'quiz',
       questionId: 13,
