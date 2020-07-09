@@ -79,7 +79,7 @@ class Consent extends Component {
   this.createCheckBoxes    = this.createCheckBoxes.bind(this)
   this.redirectToInfo      = this.redirectToInfo.bind(this);
   // this.handleDebugSurvey   = this.handleDebugSurvey.bind(this); 
-  // this.handleDebugIgt      = this.handleDebugIgt.bind(this); 
+  this.handleDebugIgt      = this.handleDebugIgt.bind(this); 
   
    
   // this.selectAllCheckboxes = this.selectAllCheckboxes.bind(this)
@@ -147,14 +147,13 @@ redirectToInfo() {
 
 // }
 
-// handleDebugIgt(){
-// // This is for debug purposes only 
-//   this.props.history.push({
-//       pathname: `/InstructionsIgt`, 
-//       state: {participant_info: this.props.location.state.participant_info, newblock_frame: true} // to be changed
-//   })
-
-// }
+handleDebugIgt(){
+// This is for debug purposes only 
+  this.props.history.push({
+      pathname: `/InstructionsIgt`, 
+      state: {participant_info: this.props.location.state.participant_info, newblock_frame: true} // to be changed
+  })
+}
 
 
 handleSubmit(event) {
@@ -257,6 +256,13 @@ createCheckBoxes(){
             SUBMIT
           </button>
         </div>
+        <br></br>
+        <div>
+          <button type="button" className="btn btn-save btn-primary pad-20" onClick={this.handleDebugIgt}>
+            PLAY IST
+          </button>
+        </div>
+        
           </div>
       </center>
 
