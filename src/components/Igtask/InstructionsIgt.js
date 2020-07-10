@@ -117,12 +117,12 @@ class InstructionsIgt extends React.Component {
 
             <p><span className='bold'>To open the box you, you need to click on it </span>, and it will reveal its colour.</p>
             <p><span className='bold'>Your goal is to choose the colour that you think is more plentiful</span>.</p>
-            <p>If you choose a correct colour you will earn <span className="bold">100 points</span>, otherwise you will loose <span className="bold">-100 points</span>.</p>
+            <p>If you choose a correct colour you will earn <span className="bold">100 points</span>, otherwise you will lose <span className="bold">-100 points</span>.</p>
             </div> 
         }
 
         else if (this.state.currentInstructionText===2) {
-        mytext = <div className='textbox'> <p></p><p>Before you make your choice, you can <span className="bold"> open as many boxes as you want untill you feel certain enough</span></p>
+        mytext = <div className='textbox'> <p></p><p>Before you make your choice, you can <span className="bold"> open as many boxes as you want until you feel certain enough</span></p>
                 <p>Once you feel certain enough, you can decide for the colour by clicking on the coloured boxes below.</p>
                 <div className="symbolframe">    
                     <img className="introsymbol"  src={require('../../images/IGT_inst1.png')} alt='introsymbol'/> 
