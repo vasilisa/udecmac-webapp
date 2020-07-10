@@ -299,10 +299,10 @@ var quizQuestions = [
               content: "Continue"
           }
           ],
-      qtype: "button", // to be maybe changed
+      qtype: "button", 
       questionId: 10,
       surveytag: 'covidprotbeh',
-      title: '', // to be changed
+      title: '', 
       constraint: [
         {min: ""},
         {max: ""}
@@ -310,7 +310,7 @@ var quizQuestions = [
   },
 
    {
-      question:"Do you make sure to stay at least 2 metres (6ft) away from people that are not members of your household?",
+      question:"Do you stay at least 2 metres (6ft) away from people that are not members of your household?",
 
       answers: [{
         type: "covid-1",
