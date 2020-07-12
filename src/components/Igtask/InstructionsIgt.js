@@ -39,8 +39,8 @@ class InstructionsIgt extends React.Component {
         let params = queryString.parse(url);
 
         // console.log(params) 
-        const prolific_id       = (params['PROLIFIC_PID']=== undefined ? 'undefined' : params['PROLIFIC_PID']) 
-        const participant_id    = (params['PARTICIPANT_ID']=== undefined ? 1000 : params['PARTICIPANT_ID']) 
+        const prolific_id       = (params['PROLIFIC_PID']=== undefined ? this.props.location.state.participant_info.prolific_id : params['PROLIFIC_PID']) 
+        const participant_id    = (params['PARTICIPANT_ID']=== undefined ? this.props.location.state.participant_info.participant_id : params['PARTICIPANT_ID']) 
 
 
 //         const participant_info = this.props.location.state.participant_info
@@ -88,11 +88,11 @@ class InstructionsIgt extends React.Component {
         if(whichButton==="left" && curText > 1){
         this.setState({currentInstructionText: curText-1});
         }
-        else if(whichButton==="right" && curText < 2){ // this only for the 1st part of instructions right now: to be changed 
+        else if(whichButton==="right" && curText < 3){ // this only for the 1st part of instructions right now: to be changed 
       
         this.setState({currentInstructionText: curText+1});
         }
-        if(whichButton==="right" && curText === 1){
+        if(whichButton==="right" && curText === 2){
         this.setState({readyToProceed: true});
         }
     }
@@ -124,32 +124,30 @@ class InstructionsIgt extends React.Component {
         else if (this.state.currentInstructionText===2) {
         mytext = <div className='textbox'> <p></p><p>Before you make your choice, you can <span className="bold"> open as many boxes as you want until you feel certain enough</span></p>
                 <p>Once you feel certain enough, you can decide for the colour by clicking on the coloured boxes below.</p>
-                <div className="symbolframe">    
-                    <img className="introsymbol"  src={require('../../images/IGT_inst1.png')} alt='introsymbol'/> 
+                <div>    
+                    <img className="instructimg"  src={require('../../images/IGT_inst1.png')} alt='instructimg'/> 
                 </div>
                 </div>
             }
-        // To maybe put within Block 
         else if (this.state.currentInstructionText===3) {
-            mytext = <div className='textbox'> <p></p> <p> Well done so far!</p>
-            <p>The next games are a bit different.</p>
-            <p><span className="bold">With every box open</span>, you will earn <span className="bold">10 points less </span>.</p>
-            <p>This time the wins start at 250 points.</p>
-            <p>If you would decide without opening any boxes, you would win 250 points.</p>
-
-            <div className="symbolframe">    
-                    <img className="introsymbol"  src={require('../../images/IGT_inst2.png')} alt='introsymbol'/> 
-            </div>
-            </div>;
-        }
-        else if (this.state.currentInstructionText===4) {
-            mytext = <div className='textbox'> <p></p> <p>There is <span className="bold">always</span> a slot machine that gives <span className="bold">currenty</span> more points on average then the other one.</p>
-            <p> If you open let's say 3 cards and you choose a correct colour, then you would win 220 points.</p>
-            <p>However, if  you're wrong, you will <span className="bold">always lose 100 points</span>.</p>
-            <p>You can see how much you can win on the score board on the top.</p>
-            </div>;
-        }
-
+        mytext = <div className='textbox'> <p></p><p>Additionally, we will ask you about how confident you are about your choice.</p>
+                <p></p>
+                <div>    
+                    <img className="instructimgconf"  src={require('../../images/conf_intro.png')} alt='instructimgconf'/> 
+                </div>
+                <p></p>
+                <p><span className = 'bold'>Very uncertain</span> indicates that you are <span className = 'bold'>very unsure</span> that you chose the colour which is <span className='bold'> the most plentiful</span>.</p>
+                <p><span className = 'bold'>Very certain</span>  indicates that you are <span className = 'bold'>very sure</span> that you chose the colour which is <span className='bold'> the most plentiful</span>.</p> 
+                <p>Do your best to rate your confidence accurately!</p> 
+                <p>For example if you are somewhat uncertain that you chose the most plentiful colour, slide your answer to the left.</p>
+                <p>Alternatively if you are more certain that you chose the most plentiful colour, slide your answer to the right.</p>
+                <p>Double-click the mouse or tap the circle on the slider to confirm your rating.</p> 
+                <p>Don't overthink your ratings too much!</p>
+                <p>Be sure to make use of the <span className='bold'>full length</span> of the scale throughout the game!</p>
+  
+                </div>
+            }
+    
         return (
             <CSSTransitionGroup
             className="container"
@@ -189,10 +187,12 @@ class InstructionsIgt extends React.Component {
                     }
 
                     <div>
+                    <center>
                         {mytext}
+                    </center>
                     </div>
                     {this.state.readyToProceed ?
-                    <div className="buttonInstruction">
+                    <div>
                     <center>
                         <label className='textbox'> Let's try it first!</label><br/>
                         <Button className="buttonInstructionStart" onClick={()=>this.redirectToTarget()}>

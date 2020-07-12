@@ -1,0 +1,16 @@
+.conf-slider {
+  margin-top:3vh;
+  width: 95%;
+ margin-bottom:-6vw;
+}
+
+.sliderText{
+	font-size:3vh;
+
+}
+.slider-val{
+	margin-left:12vw;
+	margin-right:12vw;
+	font-size:3vh;
+	
+}

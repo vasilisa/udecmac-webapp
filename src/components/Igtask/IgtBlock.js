@@ -6,6 +6,8 @@ import { handleResponse } from '../helpers';
 
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'; // for newer version 
 
+import './IgtBlock.css';
+
 
 class IgtBlock extends React.Component {
   constructor(props){
@@ -119,8 +121,8 @@ render()
           {text}           
         </div> 
         <center>
-          <Button className="buttonInstructionsBlock" onClick={()=>this.redirectToTarget()}>
-            &#8594;
+          <Button className="buttonStart" onClick={()=>this.redirectToTarget()}>
+            CONTINUE
           </Button>
         </center>
       </div>
@@ -162,8 +164,8 @@ render()
         </div> 
           
         <div className="instructionsButtonContainer">
-          <Button id="start" className="buttonInstructionsBlock" onClick={()=>this.redirectToTarget()}>
-              &#8594;
+          <Button id="start" className="buttonStart" onClick={()=>this.redirectToTarget()}>
+              CONTINUE
           </Button>
           </div>
           </center>
@@ -196,7 +198,7 @@ render()
         </div> 
           
         <div className="instructionsButtonContainer">
-            <Button id="start" className="buttonInstructionsBlock" onClick={()=>this.redirectToTarget()}>
+            <Button id="start" className="buttonStart" onClick={()=>this.redirectToTarget()}>
               START
             </Button>
         </div>
@@ -213,8 +215,8 @@ render()
                 <p><span className="bold">With every box you open, you will win 10 points less.</span></p>
                 <p>This time, the wins start at 250 points.</p>
                 <p>If you would decide without opening any card, you would win 250 points.</p>
-                <p>If you open, let's say 3 cards and you choose the correct colour, then you would win 220 points.</p>
-                <p>However if you are wrong, you will <span className="bold">always loose 100 points</span>.</p>
+                <p>If you open, let's 3 cards and you choose the correct colour, then you would win 220 points.</p>
+                <p>However if you are wrong, you will <span className="bold">always lose 100 points</span>.</p>
                 <p>You can see how much you can win on the score board on the top.</p>
                 <p>You will play several rounds.</p>
                 </div>
@@ -234,11 +236,11 @@ render()
         <div>
             {text}           
         </div> 
-        <div className="symbolframe">    
-            <img className="introsymbol"  src={require('../../images/IGT_inst2.png')} alt='introsymbol'/> 
+        <div>    
+            <img className="instructimg"  src={require('../../images/IGT_inst2.png')} alt='introsymbol'/> 
         </div>
-        <div className="instructionsButtonContainer">
-            <Button id="start" className="buttonInstructionsBlock" onClick={()=>this.redirectToTarget()}>
+        <div>
+            <Button id="start" className="buttonStart" onClick={()=>this.redirectToTarget()}>
               START
             </Button>
         </div>
@@ -266,7 +268,7 @@ render()
         }
       else
         { 
-          text = <div><p>Doing great!</p>
+          text = <div className='textbox'><p>Doing great!</p>
                 <p>Your score: {this.state.score}</p>
                 </div> //'End of block feedback 
         }
@@ -286,8 +288,8 @@ render()
         {text}           
       </div>
         <center>
-        <Button className="buttonInstructionStart" onClick={()=>this.redirectToTarget()}>
-          &#8594;
+        <Button className="buttonStart" onClick={()=>this.redirectToTarget()}>
+          CONTINUE
         </Button>
         </center>
     </center>
