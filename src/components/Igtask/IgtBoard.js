@@ -120,7 +120,7 @@ componentDidMount() {
       var date = new Date()
       var rt_  = date.getTime() - this.state.start_click
 
-      console.log('rt_',rt_)
+      // console.log('rt_',rt_)
 
       let rt_click_ = this.state.click_rt // a sequence of click rts
 
@@ -131,7 +131,7 @@ componentDidMount() {
         start_click: date.getTime() 
       })
 
-      console.log('RT',this.state.click_rt)
+      // console.log('RT',this.state.click_rt)
     
 
       if (openfields[i] === null){
@@ -213,7 +213,7 @@ componentDidMount() {
   // Compute the block relative performance: 
 
   {
-    console.log('Redirect')
+    // console.log('Redirect')
 
     const score = this.state.totalOutcome
 
@@ -280,8 +280,8 @@ componentDidMount() {
     rt_confidence.push(rt_conf)
     confidence_init.push(conf_init)
 
-    console.log('Confidence value is:',confidence) 
-    console.log('Reaction times for confidence is:',rt_confidence) 
+    // console.log('Confidence value is:',confidence) 
+    // console.log('Reaction times for confidence is:',rt_confidence) 
     
     this.setState(
     {
