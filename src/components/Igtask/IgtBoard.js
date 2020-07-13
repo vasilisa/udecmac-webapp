@@ -26,7 +26,7 @@ class IgtBoard extends React.Component {
     const sequence_  = sqsjson[this.props.location.state.participant_info.run-1][this.props.location.state.participant_info.game-1] // 0 should be the 1st game of the run 
     const cols_      = clsjson[this.props.location.state.participant_info.run-1][this.props.location.state.participant_info.game-1] 
     
-    const totalTrial_ = this.props.location.state.participant_info.run ===1 ? 1: 5 // 15 ORIG 15 First run is a training one with just 1 game. 
+    const totalTrial_ = this.props.location.state.participant_info.run ===1 ? 1: 15 // 15 First run is a training one with just 1 game. 
 
     var time_date_first   = new Date()
     this.state = {
@@ -57,6 +57,7 @@ class IgtBoard extends React.Component {
       totalSeq: [],
       outcomes: [],
       click_rt: [], 
+      click_rt_total: [],  // cocnatenates sample rt clicks for each trial 
       start_click: time_date_first.getTime(),
       showConf         : false, 
       confidence       : [], 
@@ -67,6 +68,8 @@ class IgtBoard extends React.Component {
       confidence_init:[],
       showFeedback: false,
       clicked: Array(2).fill(false),
+      opened_pos:[], // positions of the opened squares
+      opened_pos_total: [] // cocnatenates sample positions for each trial  
     
     };
 
@@ -105,7 +108,6 @@ componentDidMount() {
    this._isMounted = false;
   }
 
-
   
     handleFieldClick(i) {
 
@@ -117,22 +119,6 @@ componentDidMount() {
       const opened_seq    = this.state.opened_seq.slice();
       const color         = this.state.color.slice();
 
-      var date = new Date()
-      var rt_  = date.getTime() - this.state.start_click
-
-      // console.log('rt_',rt_)
-
-      let rt_click_ = this.state.click_rt // a sequence of click rts
-
-      rt_click_.push(rt_)
-
-      this.setState({
-        click_rt:rt_click_,
-        start_click: date.getTime() 
-      })
-
-      // console.log('RT',this.state.click_rt)
-    
 
       if (openfields[i] === null){
         openfields[i] = seq[n_opened_prev];
@@ -142,7 +128,25 @@ componentDidMount() {
         } else if (seq[n_opened_prev]===2){
           color[i] = this.state.cols[1];
         }
-        this.setState({color: color});
+
+        var date = new Date()
+        var rt_  = date.getTime() - this.state.start_click
+    
+       let rt_click_   = this.state.click_rt // a sequence of click rts
+       let opened_pos_ = this.state.opened_pos
+
+        opened_pos_.push(i+1) 
+        rt_click_.push(rt_)
+
+        this.setState({
+          color: color, 
+          click_rt:rt_click_,
+          start_click: date.getTime(), 
+          opened_pos: opened_pos_ 
+        }); 
+
+        // console.log('RT',this.state.click_rt)
+        // console.log('Clicked:',i)
 
       }
 
@@ -292,7 +296,8 @@ componentDidMount() {
       color: Array(25).fill(null),
       n_opened: 0, 
       showFeedback: true,
-
+      click_rt: [],
+      opened_pos: [], 
     }
 
       )
@@ -322,7 +327,7 @@ componentDidMount() {
         confidence_init: confidence_init,
         showFeedback: false,
         clicked: Array(2).fill(false),
-        end: false
+        end: false,
       }),1000);
 
       }
@@ -341,7 +346,7 @@ componentDidMount() {
 
       var current_date = new Date().toLocaleString();
       
-      let body     = {  'block_number'     : this.state.participant_info.run, 
+      let body     = { 'block_number'     : this.state.participant_info.run, 
                       'chosen' : this.state.chosen,
                       'opened': this.state.totalOpened,
                       'correct': this.state.correct, 
@@ -350,10 +355,11 @@ componentDidMount() {
                       'beginexp'  : this.state.participant_info.beginexp,
                       'endexp'    : current_date, 
                       'outcomes'  : this.state.outcomes,
-                      'click_rt'  : this.state.click_rt, 
+                      'click_rt'  : this.state.click_rt_total, 
                       'confidence': this.state.confidence,
                       'rt_confidence': this.state.rt_confidence, 
-                      'confidence_init': this.state.confidence_init
+                      'confidence_init': this.state.confidence_init,
+                      'opened_pos': this.state.opened_pos_total
 
                   }  
 
@@ -381,7 +387,7 @@ componentDidMount() {
       const outcome = this.evalOutcome(this.state.sequence,i,this.state.pot_win,this.state.pot_loss);
       // const game_   = this.state.game + 1 
 
-      console.log("submitted: " + i)
+      // console.log("submitted: " + i)
       // console.log("outcome: "+outcome)
       // console.log('Total opened', this.state.n_opened)
 
@@ -390,8 +396,6 @@ componentDidMount() {
 
       let chosen_ = this.state.chosen; //
       chosen_.push(i)
-
-      console.log(chosen_)
 
       let correct_ = this.state.correct;
       correct_.push(outcome >0 ? 1:0)
@@ -405,6 +409,14 @@ componentDidMount() {
       let totalSeq_ = this.state.totalSeq
       totalSeq_.push(this.state.opened_seq.slice(0, this.state.n_opened))
 
+      let click_rt_total_ = this.state.click_rt_total
+      click_rt_total_.push(this.state.click_rt)
+
+      let opened_pos_total_ = this.state.opened_pos_total
+      opened_pos_total_.push(this.state.opened_pos)
+
+      // console.log('all rt:',click_rt_total_)
+      // console.log('all opened positions:',opened_pos_total_)
       
       this.setState({
       chosen: i,
@@ -419,7 +431,9 @@ componentDidMount() {
       outcomes: outcomes_,
       showConf: true,
       clicked: clicked_,
-      end: true
+      end: true,
+      opened_pos_total: opened_pos_total_,
+      click_rt_total: click_rt_total_
       }); 
       }
     }
