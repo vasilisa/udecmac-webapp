@@ -11,12 +11,14 @@ import * as feedback from '../../questionnaires/FEEDBACK';
 import * as covidprotbeh from '../../questionnaires/COVID19_protbehav_part3.js';
 import * as covidinfos from '../../questionnaires/COVID19_infos_part4.js';
 import * as covidpersimp from '../../questionnaires/COVID19_persimp_part6.js';
+import * as covidrisk from '../../questionnaires/COVID19_riskperc_part5.js';
 
 
 var quizData = {
   covidprotbeh: covidprotbeh,
   covidinfos: covidinfos,
   covidpersimp: covidpersimp,
+  covidrisk: covidrisk,
   ocir: ocir,
   pad: pad,
   hads: hads,

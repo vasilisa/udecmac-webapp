@@ -317,5 +317,109 @@ var quizQuestions = [
       ]
   },
 
+  {
+      question: "How afraid are you of catching the COVID-19 (coronavirus)?",
+      answers: [
+          {
+              type: "covidrisk-1",
+              content: "1 - Not afraid at all"
+          },
+          {
+              type: "covidrisk-2",
+              content: "2"
+          },
+          {
+              type: "covidrisk-3",
+              content: "3 - Moderately afraid"
+          },
+          {
+              type: "covidrisk-4",
+              content: "4"
+          },
+          {
+              type: "covidrisk-5",
+              content: "5 - Extremely afraid"
+          },
+      ],
+      questionId: 11,
+      surveytag: 'covidrisk',
+      title: '',
+      qtype:"quiz",
+      constraint: [
+        {min: ""},
+        {max: ""}
+      ]
+  },
+
+
+{
+      question: "How afraid are you to pass the virus on to someone else (knowingly or unknowingly)?",
+      answers: [
+        {
+            type: "covidrisk-1",
+            content: "1 - Not afraid at all"
+        },
+        {
+            type: "covidrisk-2",
+            content: "2"
+        },
+        {
+            type: "covidrisk-3",
+            content: "3 - Moderately afraid"
+        },
+        {
+            type: "covidrisk-4",
+            content: "4"
+        },
+        {
+            type: "covidrisk-5",
+            content: "5 - Extremely afraid"
+        },
+    ],
+      questionId: 12,
+      surveytag: 'covidrisk',
+      title: '',
+      qtype:"quiz",
+      constraint: [
+        {min: ""},
+        {max: ""}
+      ]
+  },
+
+  {
+      question: "Does following the guidelines relieve your anxiety?",
+      answers: [
+        {
+            type: "covidrisk-1",
+            content: "1 - Not at all"
+        },
+        {
+            type: "covidrisk-2",
+            content: "2"
+        },
+        {
+            type: "covidrisk-3",
+            content: "3 - Partially"
+        },
+        {
+            type: "covidrisk-4",
+            content: "4"
+        },
+        {
+            type: "covidrisk-5",
+            content: "5 - Very much so"
+        },
+    ],
+      questionId:13,
+      surveytag: 'covidrisk',
+      title: '',
+      qtype:"quiz",
+      constraint: [
+        {min: ""},
+        {max: ""}
+      ]
+  },
+
+
 ]
 export default quizQuestions;
