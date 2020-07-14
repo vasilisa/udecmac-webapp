@@ -591,7 +591,7 @@ var quizQuestions = [
       ]
   },
   {
-      question:"Overall, do you follow the recommendations from authorities to prevent spread of COVID-19 (coronavirus)?",
+      question:"Overall, do you follow the recommendations from authorities to prevent the spread of COVID-19 (coronavirus)?",
 
       answers: [{
          type: "covid-1",
