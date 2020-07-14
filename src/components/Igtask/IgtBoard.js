@@ -26,7 +26,7 @@ class IgtBoard extends React.Component {
     const sequence_  = sqsjson[this.props.location.state.participant_info.run-1][this.props.location.state.participant_info.game-1] // 0 should be the 1st game of the run 
     const cols_      = clsjson[this.props.location.state.participant_info.run-1][this.props.location.state.participant_info.game-1] 
     
-    const totalTrial_ = this.props.location.state.participant_info.run ===1 ? 1: 15 // 15 First run is a training one with just 1 game. 
+    const totalTrial_ = this.props.location.state.participant_info.run ===1 ? 1: 15 // 15 ORIG 15 First run is a training one with just 1 game. 
 
     var time_date_first   = new Date()
     this.state = {
@@ -381,7 +381,7 @@ componentDidMount() {
     handleEndOfGame(i) {
 
     
-    if (((this.state.run < 3) && (this.state.n_opened > 0)) || (this.state.run == 3)) {
+    if (this.state.n_opened > 0) { // at least 1 box has to be opened before making a choice 
 
       // evaluate result
       const outcome = this.evalOutcome(this.state.sequence,i,this.state.pot_win,this.state.pot_loss);

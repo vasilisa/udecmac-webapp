@@ -214,7 +214,6 @@ render()
                 <p>The next game is a little bit different.</p>
                 <p><span className="bold">With every box you open, you will win 10 points less.</span></p>
                 <p>This time, the wins start at 250 points.</p>
-                <p>If you would decide without opening any card, you would win 250 points.</p>
                 <p>If you open, let's 3 cards and you choose the correct colour, then you would win 220 points.</p>
                 <p>However if you are wrong, you will <span className="bold">always lose 100 points</span>.</p>
                 <p>You can see how much you can win on the score board on the top.</p>
