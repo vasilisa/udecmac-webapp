@@ -23,6 +23,7 @@ const survey_list = [
 'hads', 
 'covidprotbeh',
 'covidinfos',
+'covidrisk',
 'covidpersimp',
 'feedback'
  ] 

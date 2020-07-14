@@ -17,19 +17,19 @@ Adapted for T2 of the COVID-19 study. For T1 see T1 branch on github
 // IMPORTANT: Has to match the import names in the Survey.js !!! 
 // THIS IS SURVEY_LIST FOR TIME POINT 1! 
 
-const survey_list = [
-// this goes on each time point 
-'pad', 
-'ocir',
-'hads', 
-'covidprotbeh',
-'covidinfos',
-'covidrisk',
-'covidpersimp',
-'feedback'
- ] 
+// const survey_list = [
+// // this goes on each time point 
+// 'pad', 
+// 'ocir',
+// 'hads', 
+// 'covidprotbeh',
+// 'covidinfos',
+// 'covidrisk',
+// 'covidpersimp',
+// 'feedback'
+//  ] 
  
-const n =  survey_list.length-1;   
+// const n =  survey_list.length-1;   
 
 class Intro extends React.Component {
   constructor(props) {
@@ -50,10 +50,10 @@ class Intro extends React.Component {
       prolific_id: prolific_id,
       study_id: 'COVID-T2',
       longit_id: 2, 
-      block_number: 0, // has to be in the parent for Survey component for proper functioning 
-      TotalBlock: n, // has to be in the parent for Survey component for proper functioning 
+      // block_number: 0, // has to be in the parent for Survey component for proper functioning 
+      // TotalBlock: n, // has to be in the parent for Survey component for proper functioning 
       date_time: currentDate,
-      survey_list: survey_list,
+      // survey_list: survey_list,
       task: true, // if true than it redirects to Tricia's task after consent 
       survey: false // if true than it redirect to the survey but not Tricia's task after     
   }
