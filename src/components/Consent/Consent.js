@@ -138,13 +138,13 @@ redirectToInfo() {
 //   this.selectAllCheckboxes(true);
 // } 
 
-handleDebugSurvey(){
-// This is for debug purposes only 
-  this.props.history.push({
-      pathname: `/Survey`, 
-      state: {participant_info: this.props.location.state.participant_info, newblock_frame: true} // to be changed
-  })
-}
+// handleDebugSurvey(){
+// // This is for debug purposes only 
+//   this.props.history.push({
+//       pathname: `/Survey`, 
+//       state: {participant_info: this.props.location.state.participant_info, newblock_frame: true} // to be changed
+//   })
+// }
 
 // handleDebugIgt(){
 // // This is for debug purposes only 
@@ -256,12 +256,6 @@ createCheckBoxes(){
           </button>
         </div>
         <br></br>
-        <div>
-          <button type="button" className="btn btn-save btn-primary pad-20" onClick={this.handleDebugSurvey}>
-            DEBUG SURVEY
-          </button>
-        </div>
-        
         </div>
       </center>
 

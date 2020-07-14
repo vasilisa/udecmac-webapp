@@ -19,14 +19,14 @@ Adapted for T2 of the COVID-19 study. For T1 see T1 branch on github
 
 const survey_list = [
 // this goes on each time point 
-// 'pad', 
-// 'ocir',
-// 'hads', 
-// 'covidprotbeh',
-// 'covidinfos',
+'pad', 
+'ocir',
+'hads', 
+'covidprotbeh',
+'covidinfos',
 'covidrisk',
-// 'covidpersimp',
-// 'feedback'
+'covidpersimp',
+'feedback'
  ] 
  
 const n =  survey_list.length-1;   
