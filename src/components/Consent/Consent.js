@@ -78,7 +78,7 @@ class Consent extends Component {
   this.createCheckBox      = this.createCheckBox.bind(this);
   this.createCheckBoxes    = this.createCheckBoxes.bind(this)
   this.redirectToInfo      = this.redirectToInfo.bind(this);
-  this.handleDebugSurvey   = this.handleDebugSurvey.bind(this); 
+  // this.handleDebugSurvey   = this.handleDebugSurvey.bind(this); 
   // this.handleDebugIgt      = this.handleDebugIgt.bind(this); 
   
    
