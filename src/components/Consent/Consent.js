@@ -144,8 +144,7 @@ handleDebugSurvey(){
       pathname: `/Survey`, 
       state: {participant_info: this.props.location.state.participant_info, newblock_frame: true} // to be changed
   })
-
-// }
+}
 
 // handleDebugIgt(){
 // // This is for debug purposes only 
