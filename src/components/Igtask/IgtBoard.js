@@ -53,7 +53,6 @@ class IgtBoard extends React.Component {
       totalTrial: totalTrial_, 
       correct: [], 
       totalOpened: [], 
-      chosen: [], 
       totalSeq: [],
       outcomes: [],
       click_rt: [], 
@@ -419,12 +418,11 @@ componentDidMount() {
       // console.log('all opened positions:',opened_pos_total_)
       
       this.setState({
-      chosen: i,
+      chosen: chosen_,
       outcome: outcome,
       totalOutcome: this.state.totalOutcome + outcome,
       clickable:false, 
       totalOpened:totalOpened_, 
-      chosen: chosen_, 
       correct: correct_,
       totalSeq: totalSeq_,
       completed: 'no', 
