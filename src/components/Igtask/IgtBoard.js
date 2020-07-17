@@ -317,7 +317,7 @@ componentDidMount() {
         sequence: sequence_,
         outcome: [],
         start: 1,
-        chosen: [],
+    //    chosen: [],
         clickable: true,
         pot_win: win_, 
         showConf: false,
