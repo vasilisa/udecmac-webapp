@@ -353,7 +353,7 @@ var quizQuestions = [
 
 
 {
-      question: "How afraid are you to pass the virus on to someone else?",
+      question: "How afraid are you of passing the virus on to someone else?",
       answers: [
         {
             type: "covidrisk-1",
