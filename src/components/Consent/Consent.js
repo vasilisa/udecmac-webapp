@@ -255,13 +255,6 @@ createCheckBoxes(){
             SUBMIT
           </button>
         </div>
-        <p></p>
-        <div>
-          <button type="button" className="btn btn-save btn-primary pad-20" onClick={this.handleDebugIgt}>
-            DEBUG IST
-          </button>
-        </div>
-        
         </div>
       </center>
 

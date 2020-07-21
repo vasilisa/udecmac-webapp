@@ -126,7 +126,7 @@ render() {
           <p>Adults (aged 18 years or over).</p>
           <p><span className="bold">What will happen to me if I take part?</span></p> 
           <p>You will play one or more online computer games, which will last around approximately 30 minutes in total.</p> 
-          <p>You will receive between <span className="bold">£8.25</span> and <span className="bold">£9.25</span> for helping us.</p>
+          <p>You will receive between <span className="bold">£8.25</span> and <span className="bold">£9.75</span> for helping us.</p>
           
           <p>The amount could vary based on the decisions you make in the game.</p> 
           <p>You will also be asked some questions about yourself, your feelings, background, attitudes and behaviour in your everyday life.</p>
