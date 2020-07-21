@@ -349,7 +349,7 @@ componentDidMount() {
         showFeedback: false,
         clicked: Array(2).fill(false),
         end: false,
-      }),1000);
+      }),1500);
 
       }
 

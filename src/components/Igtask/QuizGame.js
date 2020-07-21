@@ -223,7 +223,7 @@ setUserAnswer(answer,answerContent,questionId) {
           instimage =  <img className="quizgameimg" src={require('../../images/IGT_inst1.png')} alt='quizgameimg'/>
           mytext = <div className='textbox'><p><span className='bold'>Your goal is to choose the colour that you think is more plentiful</span>.</p>
             <p>If you choose a correct colour you will earn <span className="bold">100 points</span>, otherwise you will lose <span className="bold">-100 points</span>.</p>
-            <p>Before you make your choice, you can <span className="bold"> open as many boxes as you want until you feel certain enough</span></p>
+            <p>Before you make your choice, you can <span className="bold"> open as many boxes as you want until you feel certain enough</span>.</p>
             <p>Once you feel certain enough, you can decide for the colour by clicking on the coloured boxes below.</p>
             </div>
         }
