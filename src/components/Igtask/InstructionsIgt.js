@@ -58,9 +58,9 @@ class InstructionsIgt extends React.Component {
             longit_id: 2,
             survey_list: survey_list,
             date_time: current_date, 
-            block_number: 0, // participant_info.block_number, // not sure it should go here ! 
-            survey_list: survey_list, // participant_info.survey_list, // not sure it should go here ! 
-            TotalBlock: n, // participant_info.survey_list.length-1,
+            block_number: 0, 
+            survey_list: survey_list, 
+            TotalBlock: n, 
             TotalRun: 3, 
             run: 1,
             game: 1,   
@@ -69,9 +69,9 @@ class InstructionsIgt extends React.Component {
             beginexp: current_date, 
             currentInstructionText: 1,
             score: 0, 
-        }
+            totalscore:0
 
-    // console.log('Instructions', this.state)
+        }
 
     this.handleInstructionsLocal = this.handleInstructionsLocal.bind(this) // bind the method to avoid error on frames collapsed
     }; 
@@ -89,11 +89,11 @@ class InstructionsIgt extends React.Component {
         if(whichButton==="left" && curText > 1){
         this.setState({currentInstructionText: curText-1});
         }
-        else if(whichButton==="right" && curText < 3){ // this only for the 1st part of instructions right now: to be changed 
+        else if(whichButton==="right" && curText < 4){ // this only for the 1st part of instructions right now: to be changed 
       
         this.setState({currentInstructionText: curText+1});
         }
-        if(whichButton==="right" && curText === 2){
+        if(whichButton==="right" && curText === 3){
         this.setState({readyToProceed: true});
         }
     }
@@ -103,7 +103,7 @@ class InstructionsIgt extends React.Component {
 
     this.props.history.push({
        pathname: `/IgtBlock`,  
-       state: {participant_info: this.state, newblock_frame:this.state.newblock_frame} 
+       state: {participant_info: this.state, newblock_frame:this.state.newblock_frame,startQuiz:false} 
      })
     }
 
@@ -119,6 +119,8 @@ class InstructionsIgt extends React.Component {
             <p><span className='bold'>To open the box you, you need to click on it </span>, and it will reveal its colour.</p>
             <p><span className='bold'>Your goal is to choose the colour that you think is more plentiful</span>.</p>
             <p>If you choose a correct colour you will earn <span className="bold">100 points</span>, otherwise you will lose <span className="bold">-100 points</span>.</p>
+            <br></br>
+            <p>At the end of the game you can win up to <span className="bold">£0.50 as a bonus</span> based on your performance.</p>
             </div> 
         }
 
@@ -146,6 +148,14 @@ class InstructionsIgt extends React.Component {
                 <p>Don't overthink your ratings too much!</p>
                 <p>Be sure to make use of the <span className='bold'>full length</span> of the scale throughout the game!</p>
   
+                </div>
+            }
+
+        else if (this.state.currentInstructionText===4) {
+        mytext = <div className='textbox'> <p></p><p>Let's do the short training first!</p>
+                <p></p>
+                <p>At the end of the training we will ask you to do a short quiz.</p>
+                <p>If you fail to answer correctly to <span className='bold'>all quiz question</span> you will have to go through the instructions again and redo the quiz!</p>
                 </div>
             }
     

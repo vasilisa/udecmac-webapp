@@ -11,8 +11,7 @@ import QuizBlock from "./components/QuizBlock/QuizBlock";
 import InstructionsIgt from "./components/Igtask/InstructionsIgt";
 import IgtBlock from "./components/Igtask/IgtBlock";
 import IgtBoard from "./components/Igtask/IgtBoard";
-
-
+import QuizGame from "./components/Igtask/QuizGame";
 
 
 import * as serviceWorker from './serviceWorker';
@@ -47,6 +46,8 @@ const App = () => {
                 <Route path="/InstructionsIgt" component={InstructionsIgt} exact />
                 <Route path="/IgtBlock" component={IgtBlock} exact />
                 <Route path="/IgtBoard" component={IgtBoard} exact />
+                <Route path="/QuizGame" component={QuizGame} exact />
+                
                 
 
             

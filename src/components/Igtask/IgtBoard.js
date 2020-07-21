@@ -68,9 +68,13 @@ class IgtBoard extends React.Component {
       showFeedback: false,
       clicked: Array(2).fill(false),
       opened_pos:[], // positions of the opened squares
-      opened_pos_total: [] // cocnatenates sample positions for each trial  
+      opened_pos_total: [], // cocnatenates sample positions for each trial, 
+      startQuiz: this.props.location.state.startQuiz,
+      totalscore: this.props.location.state.participant_info.totalscore
     
     };
+
+    // console.log('QuizBoard totalscore', this.state.totalscore)
 
     this._isMounted     = false;
     // this.initialiseGame = this.initialiseGame.bind(this) 
@@ -216,15 +220,36 @@ componentDidMount() {
   // Compute the block relative performance: 
 
   {
-    // console.log('Redirect')
+    // console.log('Board run',this.state.run)
 
-    const score = this.state.totalOutcome
+    const score      = this.state.totalOutcome
+    let totalscore
+    if (this.state.run>1) {
+      totalscore = this.state.totalscore + score
+    }
+    else {
+      totalscore = this.state.totalscore
+    }
+    
+    // console.log('Total score',totalscore)
 
-    // console.log('Score',score)
+    this.setState({participant_info : {...this.state.participant_info, totalscore:totalscore},}) 
+
+    // startQuiz will depend on the block run 
+    let startQuiz_ // this.state.startQuiz 
+
+    if (this.state.run===1 || this.state.run===2) {
+      startQuiz_ = true
+      
+    }
+
+    else {
+      startQuiz_ = false
+    }
     
     this.props.history.push({
       pathname: `/IgtBlock`,
-      state: {participant_info:this.state.participant_info, newblock_frame: false, score: score}
+      state: {participant_info:this.state.participant_info, newblock_frame: false, score: score, startQuiz: startQuiz_}
     })    
   }
 
@@ -283,9 +308,6 @@ componentDidMount() {
     rt_confidence.push(rt_conf)
     confidence_init.push(conf_init)
 
-    // console.log('Confidence value is:',confidence) 
-    // console.log('Reaction times for confidence is:',rt_confidence) 
-    
     this.setState(
     {
       cols: Array(2).fill(null),
@@ -371,9 +393,7 @@ componentDidMount() {
        body: JSON.stringify(body)
      })
 
-//         console.log('Redirect to Block')
      setTimeout(() => this.redirectToBlock(),1000)
-        // redirect to Block 
     }
 
   }
