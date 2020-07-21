@@ -117,7 +117,7 @@ class InstructionsIgt extends React.Component {
             <p> At the beginning all boxes are covered.</p>
 
             <p><span className='bold'>To open the box, you need to click on it </span>, and it will reveal its colour.</p>
-            <p><span className='bold'>Your goal is to choose the colour that you think is more plentiful</span>.</p>
+            <p><span className='bold'>Your goal is to choose the colour that you think is more plentiful across all boxes</span>.</p>
             <p>If you choose a correct colour you will earn <span className="bold">100 points</span>, otherwise you will lose <span className="bold">-100 points</span>.</p>
             <br></br>
             <p>At the end of the game you can win up to <span className="bold">£0.50 as a bonus</span> based on your performance.</p>
