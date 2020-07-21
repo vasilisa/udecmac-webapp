@@ -363,11 +363,11 @@ render()
       <div>
       <center>
       <div className="textbox">
-        <p>You finished the second game! Thank you!</p>
+        <p>You have finished the second game. Thank you!</p>
         <p></p>
         {textscore}
         <p></p>
-        <p>Please, proceed to the last part the study when ready.</p>
+        <p>Please, proceed to the last part of the study when ready.</p>
       </div>
         <center>
         <Button className="buttonStart" onClick={()=>this.redirectToSurvey()}>
