@@ -105,7 +105,7 @@ render() {
         <div className="IntroConsentText">
 
           <p><span className="bold">Welcome back to our study!</span></p>
-          <p>This part of the study investigating ‘decision-making in time of uncertainty’ will take about 50 minutes.</p>
+          <p>This part of the study investigating ‘decision-making in time of uncertainty’ will take about 45 minutes.</p>
           <p>You will be asked to play two decision-making tasks and complete several questionnaires.</p>
           <p>As mentioned in our study description, this study can <span className="bold">ONLY BE COMPLETED ON A DESKTOP (computer or laptop).</span></p>
           <p>Do not start it on a phone or tablet.</p>
