@@ -116,7 +116,7 @@ class InstructionsIgt extends React.Component {
            
             <p> At the beginning all boxes are covered.</p>
 
-            <p><span className='bold'>To open the box you, you need to click on it </span>, and it will reveal its colour.</p>
+            <p><span className='bold'>To open the box, you need to click on it </span>, and it will reveal its colour.</p>
             <p><span className='bold'>Your goal is to choose the colour that you think is more plentiful</span>.</p>
             <p>If you choose a correct colour you will earn <span className="bold">100 points</span>, otherwise you will lose <span className="bold">-100 points</span>.</p>
             <br></br>
@@ -126,7 +126,7 @@ class InstructionsIgt extends React.Component {
 
         else if (this.state.currentInstructionText===2) {
         mytext = <div className='textbox'> <p></p><p>Before you make your choice, you can <span className="bold"> open as many boxes as you want until you feel certain enough</span></p>
-                <p>Once you feel certain enough, you can decide for the colour by clicking on the coloured boxes below.</p>
+                <p>Once you feel certain enough, you can choose a colour by clicking on the coloured boxes below.</p>
                 <div>    
                     <img className="instructimg"  src={require('../../images/IGT_inst1.png')} alt='instructimg'/> 
                 </div>
@@ -154,8 +154,8 @@ class InstructionsIgt extends React.Component {
         else if (this.state.currentInstructionText===4) {
         mytext = <div className='textbox'> <p></p><p>Let's do the short training first!</p>
                 <p></p>
-                <p>At the end of the training we will ask you to do a short quiz.</p>
-                <p>If you fail to answer correctly to <span className='bold'>all quiz question</span> you will have to go through the instructions again and redo the quiz!</p>
+                <p>At the end of the training we will ask you to complete a short quiz.</p>
+                <p>If you fail to answer <span className='bold'>any of the questions</span> correctly you will have to go through the instructions again and redo the quiz!</p>
                 </div>
             }
     
